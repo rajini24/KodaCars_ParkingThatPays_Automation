@@ -39,7 +39,7 @@ public class CommonUtils {
 	}
 
 	public void visibilityOfExtraWaitTime(WebElement webElementName) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		wait.until(ExpectedConditions.visibilityOf(webElementName));
 	}
 
@@ -47,7 +47,7 @@ public class CommonUtils {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(webElementName));
 	}
-
+	
 	public void attributeToBeWaitTime(WebElement webElementName, String attributeName, String attributeValue) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.attributeToBe(webElementName, attributeName, attributeValue));

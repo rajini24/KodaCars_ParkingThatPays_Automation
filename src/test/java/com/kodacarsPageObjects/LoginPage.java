@@ -18,7 +18,7 @@ public class LoginPage {
 	WebElement password;
 
 	@FindBy(xpath = "//button[@type='submit']")
-	WebElement signinBtn;
+	WebElement signin;
 
 	public void setUsername(String userName) {
 		username.sendKeys(userName);
@@ -28,8 +28,8 @@ public class LoginPage {
 		password.sendKeys(passWord);
 	}
 
-	public void clickLoginBtn() {
-		signinBtn.click();
+	public void clickSignin() {
+		signin.click();
 	}
 
 	public String getActualTitle() {

@@ -48,14 +48,6 @@ public class ConfigFileReader {
 			throw new RuntimeException(" Index url not specified in the Configuration.properties file.");
 	}
 
-	public String getRegisterUrl() {
-		String registerUrl = properties.getProperty("registerUrl");
-		if (registerUrl != null)
-			return registerUrl;
-		else
-			throw new RuntimeException(" register url not specified in the Configuration.properties file.");
-	}
-
 	public String getUsername() {
 		String username = properties.getProperty("username");
 		if (username != null)
@@ -71,7 +63,5 @@ public class ConfigFileReader {
 		else
 			throw new RuntimeException("password not specified in the Configuration.properties file.");
 	}
-
-
 
 }

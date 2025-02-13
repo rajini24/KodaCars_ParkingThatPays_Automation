@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="kodacarsTestScripts.TC001_LoginTest"/>
+      <class name="kodacarsTestScripts.AddReservationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
