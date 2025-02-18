@@ -22,7 +22,7 @@ public class LoginTest extends BaseClass {
 		loginObj.setUsername(username);
 		loginObj.setLoginPassword(password);
 		loginObj.clickSignin();
-		Assert.assertEquals(loginObj.getActualTitle(), "KodaCars Web Portal");
+		Assert.assertEquals(loginObj.getActualTitle(), "KodaCarsWebPortal");
 		LoggerLoad.info("The user is on the " + driver.getTitle() + " home page and successfully logged in.");
 	}
 }

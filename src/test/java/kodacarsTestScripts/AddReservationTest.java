@@ -8,7 +8,7 @@ import com.kodacarsTestBase.BaseClass;
 import com.kodacarsUilities.ConfigFileReader;
 import com.kodacarsUilities.LoggerLoad;
 
-public class AddReservationTest extends BaseClass{
+public class AddReservationTest extends BaseClass {
 	String username;
 	String password;
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
@@ -30,7 +30,7 @@ public class AddReservationTest extends BaseClass{
 		reservationObj.enterEmail();
 		reservationObj.enterFirstName();
 		reservationObj.enterLastName();
-		
+
 		reservationObj.selectLocationdropdown();
 		reservationObj.selectLocation();
 		reservationObj.selectSourcedropdown();
@@ -48,7 +48,10 @@ public class AddReservationTest extends BaseClass{
 		reservationObj.clickCarModelNumber();
 		reservationObj.selectLicenceno();
 		reservationObj.selectState();
-	//	reservationObj.clickCreateReservation();
-		
-}
+		reservationObj.clickCreateReservation();
+		reservationObj.clickReservationSuccessBtn();
+
+       //	reservationObj.clickCancelReservationBtn();
+
+	}
 }

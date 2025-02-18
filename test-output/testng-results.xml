@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[onStart method Test]]>
+    </line>
+    <line>
+      <![CDATA[ValidLoginCredentials Test is starting.]]>
+    </line>
+    <line>
+      <![CDATA[onTestFailureValidLoginCredentials]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-02-13T14:04:39 CST" name="Suite" finished-at="2025-02-13T14:04:51 CST" duration-ms="12228">
+  <suite started-at="2025-02-18T14:40:08 CST" name="Suite" finished-at="2025-02-18T14:40:22 CST" duration-ms="13658">
     <groups>
     </groups>
-    <test started-at="2025-02-13T14:04:39 CST" name="Test" finished-at="2025-02-13T14:04:51 CST" duration-ms="12228">
-      <class name="kodacarsTestScripts.AddReservationTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:kodacarsTestScripts.AddReservationTest@5170bcf4]" started-at="2025-02-13T14:04:39 CST" name="setup" finished-at="2025-02-13T14:04:46 CST" duration-ms="6668" status="PASS">
+    <test started-at="2025-02-18T14:40:08 CST" name="Test" finished-at="2025-02-18T14:40:22 CST" duration-ms="13658">
+      <class name="kodacarsTestScripts.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:kodacarsTestScripts.LoginTest@79fd6f95]" started-at="2025-02-18T14:40:11 CST" name="setup" finished-at="2025-02-18T14:40:19 CST" duration-ms="7870" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,53 +27,20 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddReservationForWalkIn()[pri:0, instance:kodacarsTestScripts.AddReservationTest@5170bcf4]" started-at="2025-02-13T14:04:46 CST" name="AddReservationForWalkIn" finished-at="2025-02-13T14:04:51 CST" duration-ms="5362" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+        <test-method signature="ValidLoginCredentials()[pri:0, instance:kodacarsTestScripts.LoginTest@79fd6f95]" started-at="2025-02-18T14:40:19 CST" name="ValidLoginCredentials" finished-at="2025-02-18T14:40:20 CST" duration-ms="1571" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[invalid session id: session deleted as the browser has closed the connection
-from disconnected: unable to send message to renderer
-  (Session info: chrome=132.0.6834.160)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1617cebfc047fea924390a242173033f, findElement {value=//div[@id='gridContainer']/div[@class='row text-center']/div/label, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52502}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52502/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1617cebfc047fea924390a242173033f]]>
+              <![CDATA[expected [KodaCarsWebPortal] but found [KodaCars Web Portal]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: unable to send message to renderer
-  (Session info: chrome=132.0.6834.160)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1617cebfc047fea924390a242173033f, findElement {value=//div[@id='gridContainer']/div[@class='row text-center']/div/label, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52502}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52502/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1617cebfc047fea924390a242173033f
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at com.kodacarsUilities.CommonUtils.visibilityOfMoreWaitTime(CommonUtils.java:38)
-at com.kodacarsPageObjects.AddReservationPage.clickAddReservation(AddReservationPage.java:108)
-at kodacarsTestScripts.AddReservationTest.AddReservationForWalkIn(AddReservationTest.java:27)
+              <![CDATA[java.lang.AssertionError: expected [KodaCarsWebPortal] but found [KodaCars Web Portal]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at kodacarsTestScripts.LoginTest.ValidLoginCredentials(LoginTest.java:25)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -93,15 +69,21 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[ValidLoginCredentials Test is starting.]]>
+            </line>
+            <line>
+              <![CDATA[onTestFailureValidLoginCredentials]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- AddReservationForWalkIn -->
-        <test-method is-config="true" signature="close()[pri:0, instance:kodacarsTestScripts.AddReservationTest@5170bcf4]" started-at="2025-02-13T14:04:51 CST" name="close" finished-at="2025-02-13T14:04:51 CST" duration-ms="2" status="PASS">
+        </test-method> <!-- ValidLoginCredentials -->
+        <test-method is-config="true" signature="close()[pri:0, instance:kodacarsTestScripts.LoginTest@79fd6f95]" started-at="2025-02-18T14:40:22 CST" name="close" finished-at="2025-02-18T14:40:22 CST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- kodacarsTestScripts.AddReservationTest -->
+      </class> <!-- kodacarsTestScripts.LoginTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

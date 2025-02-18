@@ -7,15 +7,18 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.github.javafaker.Faker;
 import com.kodacarsUilities.CommonUtils;
 
 public class AddReservationPage {
+	Faker faker = new Faker();
+	
 	WebDriver driver;
 	CommonUtils utilsObj = CommonUtils.getInstance();
 
 	@FindBy(xpath = "//div[@id='gridContainer']/div[@class='row text-center']/div/label")
 	WebElement addReservation;
-	
+
 	@FindBy(xpath = "//button[text()='No']")
 	WebElement clickNoConfirmation;
 
@@ -37,7 +40,7 @@ public class AddReservationPage {
 	@FindBy(xpath = "//ng-select[@bindlabel='name' and @formcontrolname='location']//input")
 	WebElement selectLocationdropdown;
 
-	@FindBy(xpath = "//ng-select[@formcontrolname='location' and @bindlabel='name']//span[contains(text(),'Damco, Noida')]")
+	@FindBy(xpath = "//ng-select[@formcontrolname='location' and @bindlabel='name']//span[contains(text(),'Barcelona')]")
 	WebElement selectLocation;
 
 	@FindBy(xpath = "//ng-select[@bindlabel='name' and @formcontrolname='source']//input[@type='text']")
@@ -63,46 +66,43 @@ public class AddReservationPage {
 
 	@FindBy(xpath = "//button[normalize-space()='Okay']")
 	WebElement selectNonprepaidokay;
-	
+
 	@FindBy(xpath = "//button[contains(text(),'Add Vehicle')]")
-	@CacheLookup
 	WebElement clickAddVehicle;
-	
+
 	@FindBy(xpath = "//ng-select[@formcontrolname='carColor']")
-	@CacheLookup
 	WebElement Carcolor_drp;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='carColor']//input[@type='text']")
-	@CacheLookup
 	WebElement selectCarcolor;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='make']//input[@type='text']")
-	@CacheLookup
 	WebElement selectCarmake;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='model']//input[@type='text']")
-	@CacheLookup
 	WebElement CarModeldropdwn;
 
 	@FindBy(xpath = "//span[text()='740']")
-	@CacheLookup
 	WebElement clickCarModelNumber;
 
 	@FindBy(xpath = "//input[@formcontrolname='licenseNo']")
-	@CacheLookup
 	WebElement enterLicenceno;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='state']//input[@type='text']")
-	@CacheLookup
 	WebElement Statedropdown;
 
 	@FindBy(xpath = "//button[text()='Create Reservation']")
 	@CacheLookup
 	WebElement createReservationBtn;
 
+	@FindBy(xpath = "//div[@class='modal-content']/div[@class='p-3 m-auto']/div/button[text()='Ok']")
+	WebElement reservationSuccessBtn;
+
 	@FindBy(xpath = "//span[@id='cell-1642']//button[@title='Cancel Reservation']")
-	@CacheLookup
 	WebElement deleteReservation;
+
+	@FindBy(xpath = "//button[@title='Cancel Reservation']")
+	WebElement cancelReservation;
 
 	public void clickAddReservation() {
 		utilsObj.visibilityOfMoreWaitTime(addReservation);
@@ -117,19 +117,29 @@ public class AddReservationPage {
 	// Enter Customer Details
 
 	public void enterFirstName() {
-		enterFirstName.sendKeys("Adam");
+		String firstName=faker.name().fullName();
+		System.out.println("The First Name : " +firstName);
+		enterFirstName.sendKeys(firstName);
+		
 	}
 
 	public void enterLastName() {
-		enterLastName.sendKeys("Samuel");
+		String lastName=faker.name().lastName();
+		System.out.println("The Last Name : " +lastName);
+		enterLastName.sendKeys(lastName);
 	}
 
 	public void enterPhoneNumber() {
-		enterPhoneNumber.sendKeys("248569400");
+		String phoneNumber=faker.phoneNumber().cellPhone();
+		System.out.println("The Phone Number : " +phoneNumber);
+		enterPhoneNumber.sendKeys(phoneNumber);
+		
 	}
 
 	public void enterEmail() {
-		enterEmail.sendKeys("abdc@gmail.com");
+		String uniqueEmail = faker.internet().safeEmailAddress();
+		System.out.println("Unique Email: " + uniqueEmail);
+		enterEmail.sendKeys(uniqueEmail);
 	}
 
 	public void selectCity() {
@@ -157,7 +167,7 @@ public class AddReservationPage {
 	}
 
 	public void enterstartDate() {
-		enterstartDate.sendKeys("02/10/2025");
+		enterstartDate.sendKeys("03/10/2025");
 	}
 
 	public void enterstartTime() {
@@ -165,7 +175,7 @@ public class AddReservationPage {
 	}
 
 	public void enterEndDate() {
-		enterEndDate.sendKeys("02/21/2025");
+		enterEndDate.sendKeys("03/21/2025");
 	}
 
 	public void enterEndTime() {
@@ -222,6 +232,14 @@ public class AddReservationPage {
 
 	public void clickCreateReservation() {
 		createReservationBtn.click();
+	}
+
+	public void clickReservationSuccessBtn() {
+		reservationSuccessBtn.click();
+	}
+
+	public void clickCancelReservationBtn() {
+		cancelReservation.click();
 	}
 
 	public AddReservationPage(WebDriver driver) {
