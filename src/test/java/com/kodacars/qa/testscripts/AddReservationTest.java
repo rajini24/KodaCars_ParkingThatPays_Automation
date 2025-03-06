@@ -1,12 +1,17 @@
-package kodacarsTestScripts;
+package com.kodacars.qa.testscripts;
 
+import java.util.Map;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.kodacarsPageObjects.AddReservationPage;
-import com.kodacarsPageObjects.LoginPage;
-import com.kodacarsTestBase.BaseClass;
-import com.kodacarsUilities.ConfigFileReader;
-import com.kodacarsUilities.LoggerLoad;
+import com.kodacars.qa.dataprovider.AddVehicleDataProvider;
+import com.kodacars.qa.pageobjects.AddReservationPage;
+import com.kodacars.qa.pageobjects.DashboardPage;
+import com.kodacars.qa.pageobjects.LoginPage;
+import com.kodacars.qa.testbase.BaseClass;
+import com.kodacars.qa.uilities.ConfigFileReader;
+import com.kodacars.qa.uilities.LoggerLoad;
 
 public class AddReservationTest extends BaseClass {
 	String username;
@@ -14,18 +19,27 @@ public class AddReservationTest extends BaseClass {
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
 
 	@Test()
+	
 	public void AddReservationForWalkIn() throws InterruptedException {
 
-		LoginPage loginObj = new LoginPage(driver);
+//		String carColor = rowData.get("Car Color");
+//		String carMake = rowData.get("Make");
+//		String carModel = rowData.get("Model");
+//		String license = rowData.get("License Plate");
+//		String state = rowData.get("State");
+	LoginPage loginObj = new LoginPage(driver);
 		username = configFileReader.getUsername();
 		password = configFileReader.getPassword();
 		loginObj.setUsername(username);
 		loginObj.setLoginPassword(password);
-		loginObj.clickSignin();
+	//	loginObj.clickSignin();
+		
+		DashboardPage dashboardObj = loginObj.clickSignin();
 		LoggerLoad.info("The user is on the " + driver.getTitle() + " home page and successfully logged in.");
-		AddReservationPage reservationObj = new AddReservationPage(driver);
-		reservationObj.clickAddReservation();
-		reservationObj.clickNoConfirmation();
+//		AddReservationPage reservationObj = new AddReservationPage(driver);
+		dashboardObj.clickAddReservation();
+		AddReservationPage reservationObj = dashboardObj.clickNoConfirmation();
+		
 		reservationObj.enterPhoneNumber();
 		reservationObj.enterEmail();
 		reservationObj.enterFirstName();
@@ -45,11 +59,16 @@ public class AddReservationTest extends BaseClass {
 		reservationObj.selectCarcolor();
 		reservationObj.selectCarmake();
 		reservationObj.CarModeldropdwn();
+	//	reservationObj.CarModeldropdwntext();
+	//	reservationObj.CarModeldummy(carModel);
 		reservationObj.clickCarModelNumber();
 		reservationObj.selectLicenceno();
 		reservationObj.selectState();
 		reservationObj.clickCreateReservation();
+		Assert.assertEquals(reservationObj.getReservationSuccessTextMessage(), "Reservation Created Successfully.");
 		reservationObj.clickReservationSuccessBtn();
+	//	reservationObj.clickReservationDetailsArrowLeft();
+		//reservationObj.clickDeleteReservationBtn();
 
        //	reservationObj.clickCancelReservationBtn();
 

@@ -1,4 +1,4 @@
-package com.kodacarsUilities;
+package com.kodacars.qa.uilities;
 
 import java.time.Duration;
 import java.util.List;

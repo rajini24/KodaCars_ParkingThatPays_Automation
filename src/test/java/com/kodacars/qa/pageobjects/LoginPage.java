@@ -1,11 +1,11 @@
-package com.kodacarsPageObjects;
+package com.kodacars.qa.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.kodacarsUilities.CommonUtils;
+import com.kodacars.qa.uilities.CommonUtils;
 
 public class LoginPage {
 	WebDriver driver;
@@ -28,8 +28,13 @@ public class LoginPage {
 		password.sendKeys(passWord);
 	}
 
-	public void clickSignin() {
+//	public void clickSignin() {
+//		signin.click();
+//	}
+
+	public DashboardPage clickSignin() {
 		signin.click();
+		return new DashboardPage(driver);
 	}
 
 	public String getActualTitle() {

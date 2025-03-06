@@ -2,19 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners>
-		<listener class-name="com.kodacarsUilities.ITestListenerClassFile" />
+		<listener class-name="com.kodacars.qa.uilities.ITestListenerClassFile" />
 	</listeners>
 
 	<test name="Test">
-
 		<classes>
-			<!-- <class name="kodacarsTestScripts.AddReservationTest"/>
-			<class name="kodacarsTestScripts.LoginTest" /> -->
-			
-			
-			<class name="kodacarsTestScripts.LoginTest" />
-		</classes>
 		
+		<!--	<class name="com.kodacars.qa.testscripts.LoginTest" /> 
+		-->
+		
+			<class name="com.kodacars.qa.testscripts.AddReservationTest" />
+		</classes>
+
 	</test> <!--
 	Test -->
 </suite> <!--

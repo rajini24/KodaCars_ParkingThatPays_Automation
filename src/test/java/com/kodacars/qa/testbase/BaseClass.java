@@ -1,4 +1,4 @@
-package com.kodacarsTestBase;
+package com.kodacars.qa.testbase;
 
 import java.time.Duration;
 
@@ -8,11 +8,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import com.kodacarsUilities.ConfigFileReader;
-
+import com.aventstack.chaintest.plugins.ChainTestListener;
+import com.kodacars.qa.uilities.ConfigFileReader;
+import com.kodacars.qa.uilities.ITestListenerClassFile;
+@Listeners({ChainTestListener.class,ITestListenerClassFile.class})
 public class BaseClass {
 	public WebDriver driver;
 
@@ -33,7 +36,7 @@ public class BaseClass {
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(configFileReader.getLoginUrl());
+		driver.get(ConfigFileReader.getLoginUrl());
 	}
 
 	@AfterMethod

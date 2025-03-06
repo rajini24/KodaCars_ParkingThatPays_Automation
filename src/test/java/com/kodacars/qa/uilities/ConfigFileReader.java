@@ -1,4 +1,4 @@
-package com.kodacarsUilities;
+package com.kodacars.qa.uilities;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -8,10 +8,10 @@ import java.util.Properties;
 
 public class ConfigFileReader {
 
-	private Properties properties;
+	private static Properties properties;
 	private static ConfigFileReader configReader;
 
-	private final String propertyFilePath = "src//test//resources//config//Configuration.properties";
+	private static final String propertyFilePath = "src//test//resources//config//Configuration.properties";
 
 	private ConfigFileReader() {
 		BufferedReader reader;
@@ -40,7 +40,7 @@ public class ConfigFileReader {
 		}
 	}
 
-	public String getLoginUrl() {
+	public static String getLoginUrl() {
 		String loginUrl = properties.getProperty("loginUrl");
 		if (loginUrl != null)
 			return loginUrl;
@@ -48,7 +48,7 @@ public class ConfigFileReader {
 			throw new RuntimeException(" Index url not specified in the Configuration.properties file.");
 	}
 
-	public String getUsername() {
+	public static String getUsername() {
 		String username = properties.getProperty("username");
 		if (username != null)
 			return username;
@@ -56,12 +56,18 @@ public class ConfigFileReader {
 			throw new RuntimeException("username  not specified in the Configuration.properties file.");
 	}
 
-	public String getPassword() {
+	public static String getPassword() {
 		String password = properties.getProperty("password");
 		if (password != null)
 			return password;
 		else
 			throw new RuntimeException("password not specified in the Configuration.properties file.");
 	}
-
+	public static String getExcelPath() {
+		String excelPath = properties.getProperty("excelPath");
+		if (excelPath != null)
+			return excelPath;
+		else
+			throw new RuntimeException(" Excel Path is not specified in the Configuration.properties file.");
+	}
 }

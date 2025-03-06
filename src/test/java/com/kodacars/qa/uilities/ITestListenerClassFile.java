@@ -1,4 +1,4 @@
-package com.kodacarsUilities;
+package com.kodacars.qa.uilities;
 
 import java.io.File;
 import java.util.Objects;
@@ -13,7 +13,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
-import com.kodacarsTestBase.BaseClass;
+import com.kodacars.qa.testbase.BaseClass;
 
 import io.qameta.allure.Attachment;
 
@@ -63,6 +63,8 @@ public class ITestListenerClassFile extends BaseClass implements ITestListener {
 			saveFailureScreenshot(driver);
 		}
 		saveTextLog(getTestMethodName(result) + "failed screenshot taken");
+
+		//final byte[] screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 		ChainTestListener.log(result.getName() + " testcase failed "); // logs for failed test cases
 		ChainTestListener.embed(screenshot, "image/png"); // to attach screenshot for failed test cases
 	}
@@ -93,6 +95,7 @@ public class ITestListenerClassFile extends BaseClass implements ITestListener {
 	}
 
 	public String getScreenshot(String testName, WebDriver driver) {
+		System.out.println("getScreenshot " + testName);
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		String screenshotPath = "target/Screenshots/screenshots" + testName + ".png";

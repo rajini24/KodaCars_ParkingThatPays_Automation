@@ -1,26 +1,33 @@
-package com.kodacarsPageObjects;
+package com.kodacars.qa.pageobjects;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.github.javafaker.Faker;
-import com.kodacarsUilities.CommonUtils;
+import com.kodacars.qa.uilities.CommonUtils;
 
 public class AddReservationPage {
 	Faker faker = new Faker();
-	
+
 	WebDriver driver;
 	CommonUtils utilsObj = CommonUtils.getInstance();
 
-	@FindBy(xpath = "//div[@id='gridContainer']/div[@class='row text-center']/div/label")
-	WebElement addReservation;
+	public AddReservationPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 
-	@FindBy(xpath = "//button[text()='No']")
-	WebElement clickNoConfirmation;
+//	@FindBy(xpath = "//button[text()='No']")
+//	WebElement clickNoConfirmation;
 
 	@FindBy(xpath = "//input[@formcontrolname='firstName']")
 	WebElement enterFirstName;
@@ -79,10 +86,18 @@ public class AddReservationPage {
 	@FindBy(xpath = "//ng-select[@formcontrolname='make']//input[@type='text']")
 	WebElement selectCarmake;
 
-	@FindBy(xpath = "//ng-select[@formcontrolname='model']//input[@type='text']")
+	@FindBy(css = "ng-select[class='ng-select ng-select-single ng-select-searchable ng-select-clearable ng-touched ng-dirty ng-invalid ng-select-bottom ng-select-focused'] span[class='ng-arrow-wrapper']")
+//	@FindBy(xpath = "//div[@aria-expanded='true']//input[@type='text']")
 	WebElement CarModeldropdwn;
 
-	@FindBy(xpath = "//span[text()='740']")
+	@FindBy(xpath = "//div[@aria-expanded='true']//input[@type='text']")
+	WebElement CarModeldropdwntext;
+
+	@FindBy(xpath = "//span[normalize-space()='Avalon']")
+	WebElement CarModeldummy;
+
+	//@FindBy(xpath = "//div[@id='a740fd26e679-0']/span[text()='240']")
+	@FindBy(xpath = "//ng-select[@formcontrolname='model']/div/div/div[3]/input")
 	WebElement clickCarModelNumber;
 
 	@FindBy(xpath = "//input[@formcontrolname='licenseNo']")
@@ -98,42 +113,38 @@ public class AddReservationPage {
 	@FindBy(xpath = "//div[@class='modal-content']/div[@class='p-3 m-auto']/div/button[text()='Ok']")
 	WebElement reservationSuccessBtn;
 
-	@FindBy(xpath = "//span[@id='cell-1642']//button[@title='Cancel Reservation']")
+	@FindBy(xpath = "//label[normalize-space()='Reservation Created Successfully.']")
+	WebElement reservationSuccessTextMessage;
+
+	@FindBy(xpath = "//span[@id='cell-515']//button[@title='Delete Reservation']")
 	WebElement deleteReservation;
 
 	@FindBy(xpath = "//button[@title='Cancel Reservation']")
 	WebElement cancelReservation;
 
-	public void clickAddReservation() {
-		utilsObj.visibilityOfMoreWaitTime(addReservation);
-		addReservation.click();
-	}
-
-	public void clickNoConfirmation() {
-		utilsObj.visibilityOfMoreWaitTime(clickNoConfirmation);
-		clickNoConfirmation.click();
-	}
+	@FindBy(xpath = "//div[@class='col-6 cursor']/i")
+	WebElement reservationDetailsArrowLeft;
 
 	// Enter Customer Details
 
 	public void enterFirstName() {
-		String firstName=faker.name().fullName();
-		System.out.println("The First Name : " +firstName);
+		String firstName = faker.name().fullName();
+		System.out.println("The First Name : " + firstName);
 		enterFirstName.sendKeys(firstName);
-		
+
 	}
 
 	public void enterLastName() {
-		String lastName=faker.name().lastName();
-		System.out.println("The Last Name : " +lastName);
+		String lastName = faker.name().lastName();
+		System.out.println("The Last Name : " + lastName);
 		enterLastName.sendKeys(lastName);
 	}
 
 	public void enterPhoneNumber() {
-		String phoneNumber=faker.phoneNumber().cellPhone();
-		System.out.println("The Phone Number : " +phoneNumber);
+		String phoneNumber = faker.phoneNumber().cellPhone();
+		System.out.println("The Phone Number : " + phoneNumber);
 		enterPhoneNumber.sendKeys(phoneNumber);
-		
+
 	}
 
 	public void enterEmail() {
@@ -146,12 +157,14 @@ public class AddReservationPage {
 		selectCity.click();
 	}
 
-	public void selectLocationdropdown() {
+	public void selectLocationdropdown() throws InterruptedException {
+		Thread.sleep(3000);
 		utilsObj.visibilityOf(selectLocationdropdown);
 		selectLocationdropdown.click();
 	}
 
-	public void selectLocation() {
+	public void selectLocation() throws InterruptedException {
+		Thread.sleep(3000);
 		utilsObj.visibilityOf(selectLocation);
 		selectLocation.click();
 	}
@@ -167,7 +180,7 @@ public class AddReservationPage {
 	}
 
 	public void enterstartDate() {
-		enterstartDate.sendKeys("03/10/2025");
+		enterstartDate.sendKeys("02/21/2025");
 	}
 
 	public void enterstartTime() {
@@ -175,7 +188,7 @@ public class AddReservationPage {
 	}
 
 	public void enterEndDate() {
-		enterEndDate.sendKeys("03/21/2025");
+		enterEndDate.sendKeys("02/25/2025");
 	}
 
 	public void enterEndTime() {
@@ -209,16 +222,64 @@ public class AddReservationPage {
 		selectCarcolor.sendKeys("Black", Keys.ENTER);
 	}
 
+	public void selectCarcolor(String color) {
+		selectCarcolor.sendKeys(color, Keys.ENTER);
+	}
+
 	public void selectCarmake() {
 		selectCarmake.sendKeys("Volvo", Keys.ENTER);
 	}
 
+	public void selectCarmake(String carMake) {
+		selectCarmake.sendKeys(carMake, Keys.ENTER);
+	}
+
 	public void CarModeldropdwn() {
-		CarModeldropdwn.sendKeys(Keys.ENTER);
+
+		// CarModeldropdwn.clear();
+		CarModeldropdwn1.click();
+
+	}
+	@FindBy(xpath = "//ng-select[@formcontrolname='model']//input[@type='text']")
+	WebElement CarModeldropdwn1;
+
+	public void CarModeldropdwntext(String carModel) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		// Click the dropdown to make the list visible
+		WebElement dropdown1 = wait.until(
+				ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, 'dropdown-trigger')]")));
+		dropdown1.click();
+
+		// Click the dropdown first
+		WebElement dropdown = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//div[contains(@class, 'ng-dropdown-panel-items scroll-host')]")));
+		dropdown.click();
+
+		// Wait for the dropdown to expand
+		wait.until(ExpectedConditions.attributeToBe(dropdown, "aria-expanded", "true"));
+
+		// Now wait for the input field to be visible
+		wait.until(ExpectedConditions.visibilityOf(CarModeldropdwntext));
+
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@aria-expanded='true']//input[@type='text']")));
+
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.visibilityOf(CarModeldropdwntext));
+		CarModeldropdwntext.sendKeys(carModel, Keys.ENTER);
+
+	}
+
+	public void CarModeldummy(String carModel) {
+		// CarModeldropdwn.clear();
+
+		// CarModeldummy.sendKeys(carModel);
+		CarModeldummy.sendKeys(Keys.ENTER);
 	}
 
 	public void clickCarModelNumber() {
-		clickCarModelNumber.click();
+		clickCarModelNumber.sendKeys(Keys.ARROW_DOWN);
+		clickCarModelNumber.sendKeys(Keys.ENTER);
+		
 	}
 
 	public void selectLicenceno() {
@@ -226,12 +287,25 @@ public class AddReservationPage {
 		enterLicenceno.sendKeys(Keys.TAB);
 	}
 
+	public void selectLicenceno(String licenseNumber) {
+		enterLicenceno.sendKeys(licenseNumber, Keys.ENTER);
+		enterLicenceno.sendKeys(Keys.TAB);
+	}
+
 	public void selectState() {
 		Statedropdown.sendKeys("California", Keys.ENTER);
 	}
 
+	public void selectState(String state) {
+		Statedropdown.sendKeys(state, Keys.ENTER);
+	}
+
 	public void clickCreateReservation() {
 		createReservationBtn.click();
+	}
+
+	public String getReservationSuccessTextMessage() {
+		return reservationSuccessTextMessage.getText();
 	}
 
 	public void clickReservationSuccessBtn() {
@@ -242,8 +316,13 @@ public class AddReservationPage {
 		cancelReservation.click();
 	}
 
-	public AddReservationPage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+	public void clickReservationDetailsArrowLeft() {
+		reservationDetailsArrowLeft.click();
 	}
+
+	public void clickDeleteReservationBtn() {
+		utilsObj.visibilityOfExtraWaitTime(deleteReservation);
+		deleteReservation.click();
+	}
+
 }
