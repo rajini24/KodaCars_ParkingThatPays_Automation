@@ -13,11 +13,15 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
+import com.kodacars.qa.pageobjects.DashboardPage;
+import com.kodacars.qa.pageobjects.LoginPage;
 import com.kodacars.qa.uilities.ConfigFileReader;
 import com.kodacars.qa.uilities.ITestListenerClassFile;
 @Listeners({ChainTestListener.class,ITestListenerClassFile.class})
 public class BaseClass {
 	public WebDriver driver;
+	protected DashboardPage dashboardObj;
+	protected LoginPage loginObj;
 
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
 
@@ -41,7 +45,7 @@ public class BaseClass {
 
 	@AfterMethod
 	public void close() {
-		//driver.quit();
+		driver.quit();
 	}
 
 

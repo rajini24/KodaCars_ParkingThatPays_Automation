@@ -47,6 +47,10 @@ public class CommonUtils {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(webElementName));
 	}
+	public WebElement elementToBeClickableExtraWaitTime(WebElement webElementName) {
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		return wait.until(ExpectedConditions.elementToBeClickable(webElementName));
+	}
 	
 	public void attributeToBeWaitTime(WebElement webElementName, String attributeName, String attributeValue) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));

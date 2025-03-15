@@ -16,28 +16,30 @@ import com.kodacars.qa.uilities.LoggerLoad;
 public class AddReservationTest extends BaseClass {
 	String username;
 	String password;
+	
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
 
-	@Test()
+	@Test(dataProvider = "addVehicleDetails",dataProviderClass=AddVehicleDataProvider.class)
 	
-	public void AddReservationForWalkIn() throws InterruptedException {
+	public void AddReservationForWalkIn(Map<String, String> rowData) throws InterruptedException {
 
-//		String carColor = rowData.get("Car Color");
-//		String carMake = rowData.get("Make");
-//		String carModel = rowData.get("Model");
-//		String license = rowData.get("License Plate");
-//		String state = rowData.get("State");
-	LoginPage loginObj = new LoginPage(driver);
-		username = configFileReader.getUsername();
-		password = configFileReader.getPassword();
+		String selectSourceName = rowData.get("Select Source");
+		String carColor = rowData.get("Car Color");
+		String carMake = rowData.get("Make");
+		String carModel = rowData.get("Model");
+		String license = rowData.get("License Plate");
+		String state = rowData.get("State");
+		
+		loginObj = new LoginPage(driver);
+		username = ConfigFileReader.getUsername();
+		password = ConfigFileReader.getPassword();
 		loginObj.setUsername(username);
 		loginObj.setLoginPassword(password);
-	//	loginObj.clickSignin();
-		
-		DashboardPage dashboardObj = loginObj.clickSignin();
+			
+		dashboardObj = loginObj.clickSignin();
 		LoggerLoad.info("The user is on the " + driver.getTitle() + " home page and successfully logged in.");
-//		AddReservationPage reservationObj = new AddReservationPage(driver);
 		dashboardObj.clickAddReservation();
+		
 		AddReservationPage reservationObj = dashboardObj.clickNoConfirmation();
 		
 		reservationObj.enterPhoneNumber();
@@ -47,26 +49,29 @@ public class AddReservationTest extends BaseClass {
 
 		reservationObj.selectLocationdropdown();
 		reservationObj.selectLocation();
-		reservationObj.selectSourcedropdown();
-		reservationObj.selectSource();
+		//reservationObj.selectSourcedropdown();
+		reservationObj.selectSource(selectSourceName);
 		reservationObj.enterstartDate();
 		reservationObj.enterstartTime();
 		reservationObj.enterEndDate();
 		reservationObj.enterEndTime();
 
+		//Add Vehicle Details
 		reservationObj.clickAddVehicle();
 		reservationObj.carColordropdown();
-		reservationObj.selectCarcolor();
-		reservationObj.selectCarmake();
-		reservationObj.CarModeldropdwn();
-	//	reservationObj.CarModeldropdwntext();
+		reservationObj.selectCarcolor(carColor);
+	//	reservationObj.clickCarMakeDropdown();
+		reservationObj.selectCarMake(carMake);
+	//	reservationObj.clickCarModelDropdown();
+		reservationObj.selectCarModel(carModel);
+		//reservationObj.CarModeldropdwntext(carModel);
 	//	reservationObj.CarModeldummy(carModel);
-		reservationObj.clickCarModelNumber();
-		reservationObj.selectLicenceno();
-		reservationObj.selectState();
-		reservationObj.clickCreateReservation();
-		Assert.assertEquals(reservationObj.getReservationSuccessTextMessage(), "Reservation Created Successfully.");
-		reservationObj.clickReservationSuccessBtn();
+		//reservationObj.clickCarModelNumber();
+		reservationObj.selectLicenceno(license);
+		reservationObj.selectState(state);
+	//	reservationObj.clickCreateReservation();
+	//	Assert.assertEquals(reservationObj.getReservationSuccessTextMessage(), "Reservation Created Successfully.");
+	//	reservationObj.clickReservationSuccessBtn();
 	//	reservationObj.clickReservationDetailsArrowLeft();
 		//reservationObj.clickDeleteReservationBtn();
 

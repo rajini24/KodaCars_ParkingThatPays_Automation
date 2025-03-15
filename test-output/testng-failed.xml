@@ -10,7 +10,7 @@
         <methods>
           <include name="setup"/>
           <include name="close"/>
-          <include name="AddReservationForWalkIn"/>
+          <include name="AddReservationForWalkIn" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.kodacars.qa.testscripts.AddReservationTest -->
     </classes>
