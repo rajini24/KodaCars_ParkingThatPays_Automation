@@ -12,7 +12,7 @@ import com.kodacars.qa.testbase.BaseClass;
 import com.kodacars.qa.uilities.ConfigFileReader;
 import com.kodacars.qa.uilities.LoggerLoad;
 
-public class AddVehicleTest extends BaseClass {
+public class CarModelAndCarMakeTest extends BaseClass{
 	String username;
 	String password;
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
@@ -26,7 +26,7 @@ public class AddVehicleTest extends BaseClass {
 		String carModel = rowData.get("Model");
 		String license = rowData.get("License Plate");
 		String state = rowData.get("State");
-
+String Acura="Acura";
 		LoginPage loginObj = new LoginPage(driver);
 		username = ConfigFileReader.getUsername();
 		password = configFileReader.getPassword();
@@ -38,18 +38,18 @@ public class AddVehicleTest extends BaseClass {
 		dashboardObj.clickNoConfirmation();
 		AddReservationPage reservationObj = new AddReservationPage(driver);
 
-		reservationObj.enterPhoneNumber();
-		reservationObj.enterEmail();
-		reservationObj.enterFirstName();
-		reservationObj.enterLastName();
-
-		reservationObj.selectLocationdropdown();
-		reservationObj.selectLocation();
-		reservationObj.selectSource(selectSourceName);
-		reservationObj.enterstartDate();
-		reservationObj.enterstartTime();
-		reservationObj.enterEndDate();
-		reservationObj.enterEndTime();
+//		reservationObj.enterPhoneNumber();
+//		reservationObj.enterEmail();
+//		reservationObj.enterFirstName();
+//		reservationObj.enterLastName();
+//
+//		reservationObj.selectLocationdropdown();
+//		reservationObj.selectLocation();
+//		reservationObj.selectSource(selectSourceName);
+//		reservationObj.enterstartDate();
+//		reservationObj.enterstartTime();
+//		reservationObj.enterEndDate();
+//		reservationObj.enterEndTime();
 
 		reservationObj.clickAddVehicle();
 
@@ -60,9 +60,9 @@ public class AddVehicleTest extends BaseClass {
 
 		reservationObj.selectCarcolor(carColor);
 		reservationObj.clickCarMakeDropdown();
-		reservationObj.selectCarMake1(carMake);
+	//	reservationObj.selectCarMake2();
 	//	reservationObj.clickCarModelDropdown();
-		reservationObj.selectCarModel1(carModel);
+	//	reservationObj.selectCarModel2();
 //		reservationObj.selectLicenceno(license);
 		reservationObj.selectState(state);
 

@@ -9,57 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">44,011</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">106,231</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.kodacars.qa.testscripts.AddReservationTest</td><td><a href="#m0">AddReservationForWalkIn</a></td><td rowspan="2">1742069646595</td><td rowspan="2">17723</td></tr><tr class="failedeven"><td><a href="#m1">AddReservationForWalkIn</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.kodacars.qa.testscripts.AddReservationKodaTest</td><td><a href="#m0">AddReservationForKoda</a></td><td rowspan="2">1742340862115</td><td rowspan="2">48083</td></tr><tr class="passedeven"><td><a href="#m1">AddReservationForKoda</a></td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.kodacars.qa.testscripts.AddReservationTest#AddReservationForWalkIn</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Koda, State=Illinois, Car Color=Black}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForWalkIn Test is starting.<br/>onTestFailureAddReservationForWalkIn</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input aria-autocomplete=&quot;list&quot; type=&quot;text&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; autocomplete=&quot;aebb1552360e&quot;&gt; is not clickable at point (578, 387). Other element would receive the click: &lt;div _ngcontent-hxt-c111=&quot;&quot; class=&quot;overlay ng-star-inserted&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=132.0.6834.160)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cf2b5aea633d2f81b973dae5cebfede1, clickElement {id=f.FF4858C35A652EAA238BDA3FD92EFB27.d.B0222B8690FFCF3AFC527A8A114173B5.e.229}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57165/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cf2b5aea633d2f81b973dae5cebfede1)] -&gt; xpath: //div[@class=&apos;col-3 form-group&apos;]/ng-select[@formcontrolname=&apos;make&apos;]//input[@type=&apos;text&apos;]]
-Session ID: cf2b5aea633d2f81b973dae5cebfede1
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy36.click(Unknown Source)
-	at com.kodacars.qa.pageobjects.AddReservationPage.selectCarMake(AddReservationPage.java:354)
-	at com.kodacars.qa.testscripts.AddReservationTest.AddReservationForWalkIn(AddReservationTest.java:64)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.kodacars.qa.testscripts.AddReservationTest#AddReservationForWalkIn</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=Black}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForWalkIn Test is starting.<br/>onTestFailureAddReservationForWalkIn</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input aria-autocomplete=&quot;list&quot; type=&quot;text&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; autocomplete=&quot;ab7ba2bb3bb7&quot;&gt; is not clickable at point (578, 387). Other element would receive the click: &lt;div _ngcontent-mgp-c111=&quot;&quot; class=&quot;overlay ng-star-inserted&quot;&gt;&lt;/div&gt;
-  (Session info: chrome=132.0.6834.160)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [84bf3e06f0d8194f1660ce4749d59b36, clickElement {id=f.257AFBF1058BDA5CC0FA293D39997092.d.4AE4C093D9ECE6D0C9618D5DFAB977E8.e.219}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57212/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (84bf3e06f0d8194f1660ce4749d59b36)] -&gt; xpath: //div[@class=&apos;col-3 form-group&apos;]/ng-select[@formcontrolname=&apos;make&apos;]//input[@type=&apos;text&apos;]]
-Session ID: 84bf3e06f0d8194f1660ce4749d59b36
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy36.click(Unknown Source)
-	at com.kodacars.qa.pageobjects.AddReservationPage.selectCarMake(AddReservationPage.java:354)
-	at com.kodacars.qa.testscripts.AddReservationTest.AddReservationForWalkIn(AddReservationTest.java:64)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.kodacars.qa.testscripts.AddReservationKodaTest#AddReservationForKoda</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{License Plate=Il75486, State=Arizona, Car Color=Black, Model=Echo, Reservation Prepaid=Prepaid/Partial, Make=Toyota, Select Source=Koda}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForKoda Test is starting.<br/>AddReservationForKoda Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.kodacars.qa.testscripts.AddReservationKodaTest#AddReservationForKoda</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{License Plate=Il75486, State=Illinois, Car Color=Black, Model=Avalon, Reservation Prepaid=Non Prepaid, Make=Toyota, Select Source=Koda}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForKoda Test is starting.<br/>AddReservationForKoda Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -2,47 +2,53 @@ package com.kodacars.qa.testscripts;
 
 import java.util.Map;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.kodacars.qa.dataprovider.CarMakeDataProvider;
+import com.kodacars.qa.dataprovider.AddVehicleKodaDataProvider;
 import com.kodacars.qa.pageobjects.AddReservationPage;
-import com.kodacars.qa.pageobjects.DashboardPage;
 import com.kodacars.qa.pageobjects.LoginPage;
 import com.kodacars.qa.testbase.BaseClass;
 import com.kodacars.qa.uilities.ConfigFileReader;
 import com.kodacars.qa.uilities.LoggerLoad;
 
-public class AddVehicleTest extends BaseClass {
+public class AddReservationKodaTest extends BaseClass {
 	String username;
 	String password;
+	
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
+	
+@Test(dataProvider = "KodaAddVehicle",dataProviderClass=AddVehicleKodaDataProvider.class)
+	
+	public void AddReservationForKoda(Map<String, String> rowData) throws InterruptedException {
 
-	@Test(dataProvider = "CarMakeDetails", dataProviderClass = CarMakeDataProvider.class)
-	// @Test()
-	public void verifyAddVehicle(Map<String, String> rowData) throws InterruptedException {
 		String selectSourceName = rowData.get("Select Source");
+		String selectPrepaid = rowData.get("Reservation Prepaid");
 		String carColor = rowData.get("Car Color");
 		String carMake = rowData.get("Make");
 		String carModel = rowData.get("Model");
 		String license = rowData.get("License Plate");
 		String state = rowData.get("State");
-
-		LoginPage loginObj = new LoginPage(driver);
+		
+		loginObj = new LoginPage(driver);
 		username = ConfigFileReader.getUsername();
-		password = configFileReader.getPassword();
+		password = ConfigFileReader.getPassword();
 		loginObj.setUsername(username);
 		loginObj.setLoginPassword(password);
-		DashboardPage dashboardObj = loginObj.clickSignin();
+			
+		dashboardObj = loginObj.clickSignin();
 		LoggerLoad.info("The user is on the " + driver.getTitle() + " home page and successfully logged in.");
 		dashboardObj.clickAddReservation();
-		dashboardObj.clickNoConfirmation();
-		AddReservationPage reservationObj = new AddReservationPage(driver);
-
+		
+		AddReservationPage reservationObj = dashboardObj.clickNoConfirmation();
+		
+		// Customer Details
 		reservationObj.enterPhoneNumber();
 		reservationObj.enterEmail();
 		reservationObj.enterFirstName();
 		reservationObj.enterLastName();
 
+		//Reservation Details
 		reservationObj.selectLocationdropdown();
 		reservationObj.selectLocation();
 		reservationObj.selectSource(selectSourceName);
@@ -50,22 +56,22 @@ public class AddVehicleTest extends BaseClass {
 		reservationObj.enterstartTime();
 		reservationObj.enterEndDate();
 		reservationObj.enterEndTime();
+		reservationObj.selectReservation(selectPrepaid);
 
+		//Add Vehicle Details
 		reservationObj.clickAddVehicle();
-
-		System.out.println("***********click carcolor");
 		reservationObj.carColordropdown();
-
-		System.out.println("***********click color");
-
 		reservationObj.selectCarcolor(carColor);
 		reservationObj.clickCarMakeDropdown();
 		reservationObj.selectCarMake1(carMake);
-	//	reservationObj.clickCarModelDropdown();
 		reservationObj.selectCarModel1(carModel);
-//		reservationObj.selectLicenceno(license);
+		
+		reservationObj.selectLicenceno(license);
 		reservationObj.selectState(state);
+		reservationObj.clickCreateReservation();
+		Assert.assertEquals(reservationObj.getReservationSuccessTextMessage(), "Reservation Created Successfully.");
+		reservationObj.clickReservationSuccessBtn();
 
-	}
-
+}
+	
 }

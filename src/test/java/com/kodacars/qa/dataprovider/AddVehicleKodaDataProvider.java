@@ -2,13 +2,13 @@ package com.kodacars.qa.dataprovider;
 
 import org.testng.annotations.DataProvider;
 
-public class AddVehicleDataProvider {
+public class AddVehicleKodaDataProvider {
+	private static final String VALID_LOGIN_SHEET = "Koda";
 
-	private static final String VALID_LOGIN_SHEET = "VehicleDetails";
-
-	@DataProvider(name = "addVehicleDetails")
+	@DataProvider(name = "KodaAddVehicle")
 	public static Object[][] validLoginDataProvider() {
 		Object[][] data = CommonDataProvider.getAllRows(VALID_LOGIN_SHEET);
 		return data;
 	}
+
 }

@@ -2,24 +2,24 @@ package com.kodacars.qa.testscripts;
 
 import java.util.Map;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.kodacars.qa.dataprovider.AddVehicleDataProvider;
+import com.kodacars.qa.dataprovider.AddVehicleWalkInDataProvider;
 import com.kodacars.qa.pageobjects.AddReservationPage;
-import com.kodacars.qa.pageobjects.DashboardPage;
 import com.kodacars.qa.pageobjects.LoginPage;
 import com.kodacars.qa.testbase.BaseClass;
 import com.kodacars.qa.uilities.ConfigFileReader;
 import com.kodacars.qa.uilities.LoggerLoad;
 
-public class AddReservationTest extends BaseClass {
+public class AddReservationWalkInTest extends BaseClass {
 	String username;
 	String password;
 	
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
 
-	@Test(dataProvider = "addVehicleDetails",dataProviderClass=AddVehicleDataProvider.class)
+	
+	//Walk-in Customer
+	@Test(dataProvider = "Walk-In",dataProviderClass=AddVehicleWalkInDataProvider.class)
 	
 	public void AddReservationForWalkIn(Map<String, String> rowData) throws InterruptedException {
 
@@ -42,14 +42,15 @@ public class AddReservationTest extends BaseClass {
 		
 		AddReservationPage reservationObj = dashboardObj.clickNoConfirmation();
 		
+		// Customer Details
 		reservationObj.enterPhoneNumber();
 		reservationObj.enterEmail();
 		reservationObj.enterFirstName();
 		reservationObj.enterLastName();
 
+		//Reservation Details
 		reservationObj.selectLocationdropdown();
 		reservationObj.selectLocation();
-		//reservationObj.selectSourcedropdown();
 		reservationObj.selectSource(selectSourceName);
 		reservationObj.enterstartDate();
 		reservationObj.enterstartTime();
@@ -60,22 +61,23 @@ public class AddReservationTest extends BaseClass {
 		reservationObj.clickAddVehicle();
 		reservationObj.carColordropdown();
 		reservationObj.selectCarcolor(carColor);
-	//	reservationObj.clickCarMakeDropdown();
-		reservationObj.selectCarMake(carMake);
-	//	reservationObj.clickCarModelDropdown();
-		reservationObj.selectCarModel(carModel);
-		//reservationObj.CarModeldropdwntext(carModel);
-	//	reservationObj.CarModeldummy(carModel);
-		//reservationObj.clickCarModelNumber();
+		reservationObj.clickCarMakeDropdown();
+		reservationObj.selectCarMake1(carMake);
+		reservationObj.selectCarModel1(carModel);
+		
 		reservationObj.selectLicenceno(license);
 		reservationObj.selectState(state);
 	//	reservationObj.clickCreateReservation();
 	//	Assert.assertEquals(reservationObj.getReservationSuccessTextMessage(), "Reservation Created Successfully.");
 	//	reservationObj.clickReservationSuccessBtn();
+		
 	//	reservationObj.clickReservationDetailsArrowLeft();
-		//reservationObj.clickDeleteReservationBtn();
+	//  reservationObj.clickDeleteReservationBtn();
 
-       //	reservationObj.clickCancelReservationBtn();
+    //	reservationObj.clickCancelReservationBtn();
 
 	}
+	
+
+	
 }

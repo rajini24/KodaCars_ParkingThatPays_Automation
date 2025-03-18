@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[onStart method Test]]>
     </line>
     <line>
-      <![CDATA[AddReservationForWalkIn Test is starting.]]>
+      <![CDATA[AddReservationForKoda Test is starting.]]>
     </line>
     <line>
-      <![CDATA[onTestFailureAddReservationForWalkIn]]>
+      <![CDATA[AddReservationForKoda Test is succeed.]]>
     </line>
     <line>
-      <![CDATA[AddReservationForWalkIn Test is starting.]]>
+      <![CDATA[AddReservationForKoda Test is starting.]]>
     </line>
     <line>
-      <![CDATA[onTestFailureAddReservationForWalkIn]]>
+      <![CDATA[AddReservationForKoda Test is succeed.]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-15T15:14:00 CDT" name="Suite" finished-at="2025-03-15T15:14:44 CDT" duration-ms="44011">
+  <suite started-at="2025-03-18T18:33:23 CDT" name="Suite" finished-at="2025-03-18T18:35:10 CDT" duration-ms="106231">
     <groups>
     </groups>
-    <test started-at="2025-03-15T15:14:00 CDT" name="Test" finished-at="2025-03-15T15:14:44 CDT" duration-ms="44011">
-      <class name="com.kodacars.qa.testscripts.AddReservationTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationTest@3f67593e]" started-at="2025-03-15T15:14:02 CDT" name="setup" finished-at="2025-03-15T15:14:06 CDT" duration-ms="4471" status="PASS">
+    <test started-at="2025-03-18T18:33:23 CDT" name="Test" finished-at="2025-03-18T18:35:10 CDT" duration-ms="106231">
+      <class name="com.kodacars.qa.testscripts.AddReservationKodaTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:33:25 CDT" name="setup" finished-at="2025-03-18T18:33:28 CDT" duration-ms="3803" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,97 +33,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddReservationForWalkIn(java.util.Map)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationTest@3f67593e]" started-at="2025-03-15T15:14:06 CDT" name="AddReservationForWalkIn" data-provider="addVehicleDetails" finished-at="2025-03-15T15:14:24 CDT" duration-ms="17723" status="FAIL">
+        <test-method signature="AddReservationForKoda(java.util.Map)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:33:29 CDT" name="AddReservationForKoda" data-provider="KodaAddVehicle" finished-at="2025-03-18T18:34:18 CDT" duration-ms="49813" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Koda, State=Illinois, Car Color=Black}]]>
+                <![CDATA[{License Plate=Il75486, State=Illinois, Car Color=Black, Model=Avalon, Reservation Prepaid=Non Prepaid, Make=Toyota, Select Source=Koda}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <input aria-autocomplete="list" type="text" autocorrect="off" autocapitalize="off" autocomplete="aebb1552360e"> is not clickable at point (578, 387). Other element would receive the click: <div _ngcontent-hxt-c111="" class="overlay ng-star-inserted"></div>
-  (Session info: chrome=132.0.6834.160)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cf2b5aea633d2f81b973dae5cebfede1, clickElement {id=f.FF4858C35A652EAA238BDA3FD92EFB27.d.B0222B8690FFCF3AFC527A8A114173B5.e.229}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57165/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cf2b5aea633d2f81b973dae5cebfede1)] -> xpath: //div[@class='col-3 form-group']/ng-select[@formcontrolname='make']//input[@type='text']]
-Session ID: cf2b5aea633d2f81b973dae5cebfede1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input aria-autocomplete="list" type="text" autocorrect="off" autocapitalize="off" autocomplete="aebb1552360e"> is not clickable at point (578, 387). Other element would receive the click: <div _ngcontent-hxt-c111="" class="overlay ng-star-inserted"></div>
-  (Session info: chrome=132.0.6834.160)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cf2b5aea633d2f81b973dae5cebfede1, clickElement {id=f.FF4858C35A652EAA238BDA3FD92EFB27.d.B0222B8690FFCF3AFC527A8A114173B5.e.229}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57165/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cf2b5aea633d2f81b973dae5cebfede1)] -> xpath: //div[@class='col-3 form-group']/ng-select[@formcontrolname='make']//input[@type='text']]
-Session ID: cf2b5aea633d2f81b973dae5cebfede1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy36.click(Unknown Source)
-at com.kodacars.qa.pageobjects.AddReservationPage.selectCarMake(AddReservationPage.java:354)
-at com.kodacars.qa.testscripts.AddReservationTest.AddReservationForWalkIn(AddReservationTest.java:64)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
             <line>
-              <![CDATA[AddReservationForWalkIn Test is starting.]]>
+              <![CDATA[AddReservationForKoda Test is starting.]]>
             </line>
             <line>
-              <![CDATA[onTestFailureAddReservationForWalkIn]]>
+              <![CDATA[AddReservationForKoda Test is succeed.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AddReservationForWalkIn -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationTest@3f67593e]" started-at="2025-03-15T15:14:24 CDT" name="close" finished-at="2025-03-15T15:14:25 CDT" duration-ms="498" status="PASS">
+        </test-method> <!-- AddReservationForKoda -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:34:18 CDT" name="close" finished-at="2025-03-18T18:34:18 CDT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationTest@3f67593e]" started-at="2025-03-15T15:14:25 CDT" name="setup" finished-at="2025-03-15T15:14:28 CDT" duration-ms="3423" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:34:18 CDT" name="setup" finished-at="2025-03-18T18:34:22 CDT" duration-ms="3134" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -134,97 +65,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddReservationForWalkIn(java.util.Map)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationTest@3f67593e]" started-at="2025-03-15T15:14:28 CDT" name="AddReservationForWalkIn" data-provider="addVehicleDetails" finished-at="2025-03-15T15:14:44 CDT" duration-ms="15539" status="FAIL">
+        <test-method signature="AddReservationForKoda(java.util.Map)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:34:22 CDT" name="AddReservationForKoda" data-provider="KodaAddVehicle" finished-at="2025-03-18T18:35:10 CDT" duration-ms="48083" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=Black}]]>
+                <![CDATA[{License Plate=Il75486, State=Arizona, Car Color=Black, Model=Echo, Reservation Prepaid=Prepaid/Partial, Make=Toyota, Select Source=Koda}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <input aria-autocomplete="list" type="text" autocorrect="off" autocapitalize="off" autocomplete="ab7ba2bb3bb7"> is not clickable at point (578, 387). Other element would receive the click: <div _ngcontent-mgp-c111="" class="overlay ng-star-inserted"></div>
-  (Session info: chrome=132.0.6834.160)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [84bf3e06f0d8194f1660ce4749d59b36, clickElement {id=f.257AFBF1058BDA5CC0FA293D39997092.d.4AE4C093D9ECE6D0C9618D5DFAB977E8.e.219}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57212/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (84bf3e06f0d8194f1660ce4749d59b36)] -> xpath: //div[@class='col-3 form-group']/ng-select[@formcontrolname='make']//input[@type='text']]
-Session ID: 84bf3e06f0d8194f1660ce4749d59b36]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input aria-autocomplete="list" type="text" autocorrect="off" autocapitalize="off" autocomplete="ab7ba2bb3bb7"> is not clickable at point (578, 387). Other element would receive the click: <div _ngcontent-mgp-c111="" class="overlay ng-star-inserted"></div>
-  (Session info: chrome=132.0.6834.160)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [84bf3e06f0d8194f1660ce4749d59b36, clickElement {id=f.257AFBF1058BDA5CC0FA293D39997092.d.4AE4C093D9ECE6D0C9618D5DFAB977E8.e.219}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57212}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57212/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (84bf3e06f0d8194f1660ce4749d59b36)] -> xpath: //div[@class='col-3 form-group']/ng-select[@formcontrolname='make']//input[@type='text']]
-Session ID: 84bf3e06f0d8194f1660ce4749d59b36
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy36.click(Unknown Source)
-at com.kodacars.qa.pageobjects.AddReservationPage.selectCarMake(AddReservationPage.java:354)
-at com.kodacars.qa.testscripts.AddReservationTest.AddReservationForWalkIn(AddReservationTest.java:64)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
             <line>
-              <![CDATA[AddReservationForWalkIn Test is starting.]]>
+              <![CDATA[AddReservationForKoda Test is starting.]]>
             </line>
             <line>
-              <![CDATA[onTestFailureAddReservationForWalkIn]]>
+              <![CDATA[AddReservationForKoda Test is succeed.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AddReservationForWalkIn -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationTest@3f67593e]" started-at="2025-03-15T15:14:44 CDT" name="close" finished-at="2025-03-15T15:14:44 CDT" duration-ms="441" status="PASS">
+        </test-method> <!-- AddReservationForKoda -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:35:10 CDT" name="close" finished-at="2025-03-18T18:35:10 CDT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.kodacars.qa.testscripts.AddReservationTest -->
+      </class> <!-- com.kodacars.qa.testscripts.AddReservationKodaTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -56,7 +56,7 @@ public class ITestListenerClassFile extends BaseClass implements ITestListener {
 
 		// add screenshot to target folder
 		System.out.println(" result.getName " + result.getName());
-	//	String screenshot = getScreenshot(result.getName(), driver);
+		String screenshot = getScreenshot(result.getName(), driver);
 
 		// allure screenshot
 		if (driver instanceof WebDriver) {
@@ -66,7 +66,7 @@ public class ITestListenerClassFile extends BaseClass implements ITestListener {
 
 		//final byte[] screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 		ChainTestListener.log(result.getName() + " testcase failed "); // logs for failed test cases
-	//	ChainTestListener.embed(screenshot, "image/png"); // to attach screenshot for failed test cases
+		ChainTestListener.embed(screenshot, "image/png"); // to attach screenshot for failed test cases
 	}
 
 	@Override
