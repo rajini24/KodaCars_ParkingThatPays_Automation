@@ -15,8 +15,9 @@
 		-->
 		
 			
-			<class name="com.kodacars.qa.testscripts.AddReservationKodaTest" />
 			
+			<class name="com.kodacars.qa.testscripts.AddReservationThirdParyTest" />
+		
 				
 		</classes>
 

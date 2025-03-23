@@ -2,6 +2,7 @@ package com.kodacars.qa.pageobjects;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -26,6 +27,12 @@ public class DashboardPage {
 	@FindBy(xpath = "//button[text()='No']")
 	@CacheLookup
 	private WebElement clickNoConfirmation;
+	
+	@FindBy(xpath = "//button[text()='Yes']")
+	@CacheLookup
+	private WebElement clickYesConfirmation;
+	
+	
 
 	public void clickAddReservation() {
 		utilsObj.visibilityOfMoreWaitTime(addReservation);
@@ -41,6 +48,12 @@ public class DashboardPage {
 		clickNoConfirmation.click();
 		return new AddReservationPage(driver);
 
+	}
+	public AddReservationPage clickYesConfirmation() {
+		utilsObj.visibilityOfMoreWaitTime(clickYesConfirmation);
+		clickYesConfirmation.click();
+		return new AddReservationPage(driver);
+		
 	}
 	
 	public DashboardPage(WebDriver driver) {

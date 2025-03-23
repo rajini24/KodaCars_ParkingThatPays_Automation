@@ -20,15 +20,15 @@ public class LoginPage {
 
 	@FindBy(xpath = "//input[@formcontrolname='userName']")
 	@CacheLookup
-	WebElement username;
+	private WebElement username;
 
 	@FindBy(xpath = "//input [@formcontrolname='password']")
 	@CacheLookup
-	WebElement password;
+	private WebElement password;
 
 	@FindBy(xpath = "//button[@type='submit']")
 	@CacheLookup
-	WebElement signin;
+	private WebElement signin;
 
 	public void setUsername(String userName) {
 		username.sendKeys(userName);

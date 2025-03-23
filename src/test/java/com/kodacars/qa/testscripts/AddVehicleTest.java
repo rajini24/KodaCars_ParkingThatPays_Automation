@@ -29,7 +29,7 @@ public class AddVehicleTest extends BaseClass {
 
 		LoginPage loginObj = new LoginPage(driver);
 		username = ConfigFileReader.getUsername();
-		password = configFileReader.getPassword();
+		password = ConfigFileReader.getPassword();
 		loginObj.setUsername(username);
 		loginObj.setLoginPassword(password);
 		DashboardPage dashboardObj = loginObj.clickSignin();
@@ -38,34 +38,26 @@ public class AddVehicleTest extends BaseClass {
 		dashboardObj.clickNoConfirmation();
 		AddReservationPage reservationObj = new AddReservationPage(driver);
 
-		reservationObj.enterPhoneNumber();
-		reservationObj.enterEmail();
-		reservationObj.enterFirstName();
-		reservationObj.enterLastName();
-
-		reservationObj.selectLocationdropdown();
-		reservationObj.selectLocation();
-		reservationObj.selectSource(selectSourceName);
-		reservationObj.enterstartDate();
-		reservationObj.enterstartTime();
-		reservationObj.enterEndDate();
-		reservationObj.enterEndTime();
+//		reservationObj.enterPhoneNumber();
+//		reservationObj.enterEmail();
+//		reservationObj.enterFirstName();
+//		reservationObj.enterLastName();
+//
+//		reservationObj.selectLocationdropdown();
+//		reservationObj.selectLocation();
+//		reservationObj.selectSource(selectSourceName);
+//		reservationObj.enterstartDate();
+//		reservationObj.enterstartTime();
+//		reservationObj.enterEndDate();
+//		reservationObj.enterEndTime();
 
 		reservationObj.clickAddVehicle();
-
-		System.out.println("***********click carcolor");
 		reservationObj.carColordropdown();
-
-		System.out.println("***********click color");
-
 		reservationObj.selectCarcolor(carColor);
 		reservationObj.clickCarMakeDropdown();
-		reservationObj.selectCarMake1(carMake);
-	//	reservationObj.clickCarModelDropdown();
-		reservationObj.selectCarModel1(carModel);
-//		reservationObj.selectLicenceno(license);
+		reservationObj.selectCarMake(carMake);
+		reservationObj.selectCarModel(carModel);
+		reservationObj.selectLicenceno(license);
 		reservationObj.selectState(state);
-
 	}
-
 }

@@ -25,129 +25,148 @@ public class AddReservationPage {
 
 	@FindBy(xpath = "//input[@formcontrolname='firstName']")
 	@CacheLookup
-	WebElement enterFirstName;
+	private WebElement enterFirstName;
 
 	@FindBy(xpath = "//input[@formcontrolname='lastName']")
 	@CacheLookup
-	WebElement enterLastName;
+	private WebElement enterLastName;
 
 	@FindBy(xpath = "//input[@formcontrolname='phoneNumber']")
 	@CacheLookup
-	WebElement enterPhoneNumber;
+	private WebElement enterPhoneNumber;
 
 	@FindBy(xpath = "//input[@type='email']")
 	@CacheLookup
-	WebElement enterEmail;
+	private WebElement enterEmail;
 
 	@FindBy(xpath = "//div[@class='ng-select-container ng-has-value']/div/div[@aria-expanded='true']")
 	@CacheLookup
-	WebElement selectCity;
+	private WebElement selectCity;
 
 	@FindBy(xpath = "//ng-select[@bindlabel='name' and @formcontrolname='location']//input")
 	@CacheLookup
-	WebElement selectLocationdropdown;
-
+	private WebElement selectLocationdropdown;
+	
 	@FindBy(xpath = "//ng-select[@formcontrolname='location' and @bindlabel='name']//span[contains(text(),'Barcelona')]")
 	@CacheLookup
-	WebElement selectLocation;
+	private WebElement selectLocation;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='source']//div[contains(@class,'ng-select-container')]")
 	@CacheLookup
-	WebElement selectSourcedropdown;
+	private WebElement selectSourcedropdown;
 
 	@FindBy(xpath = "//ng-dropdown-panel//span[@class='ng-option-label ng-star-inserted']")
 	@CacheLookup
-	WebElement source_dropdownOptionsList;
-
+	private WebElement source_dropdownOptionsList;
+	
+	@FindBy(xpath = "//input[@formcontrolname='confirmationNo']")
+	@CacheLookup
+	private WebElement confirmationNumber;
+	
 	@FindBy(xpath = "//input[@formcontrolname='startDate']")
 	@CacheLookup
-	WebElement enterstartDate;
+	private WebElement enterstartDate;
 
 	@FindBy(xpath = "//input[@formcontrolname='startTime']")
 	@CacheLookup
-	WebElement enterstartTime;
+	private WebElement enterstartTime;
 
 	@FindBy(xpath = "//input[@formcontrolname='endDate']")
 	@CacheLookup
-	WebElement enterEndDate;
+	private WebElement enterEndDate;
 
 	@FindBy(xpath = "//input[@formcontrolname='endTime']")
 	@CacheLookup
-	WebElement enterEndTime;
+	private WebElement enterEndTime;
 
-//	@FindBy(xpath = "//ng-select[@placeholder='Select']//div[@class='ng-value-container']")
-//	@CacheLookup
-//	WebElement selectNonprepaid;
-
-	@FindBy(xpath = "(//div[@role='combobox' and contains(@class, 'ng-input')])[4]")
-	private WebElement reservationPrepaidDropdown;
-//
-//	    // Locate the input field inside the combobox
-	@FindBy(xpath = "(//div[@role='combobox']//input[@type='text'])[4]")
-	private WebElement reservationInputField;
-
-	@FindBy(xpath = "//button[normalize-space()='Okay']")
-	@CacheLookup
-	WebElement selectNonprepaidokay;
+	@FindBy(xpath = "//ng-select[@formcontrolname='reservationType']//input[@type='text']")
+	private WebElement prepaidPartial;
 
 	@FindBy(xpath = "//button[contains(text(),'Add Vehicle')]")
 	@CacheLookup
-	WebElement clickAddVehicle;
+	private WebElement clickAddVehicle;
 
 	@FindBy(xpath = "//ng-select[@bindlabel='color']//div[@class='ng-select-container ng-has-value']")
 	@CacheLookup
-	WebElement carColorDropdown;
+	private WebElement carColorDropdown;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='carColor']//input[@type='text']")
 	@CacheLookup
-	WebElement selectCarcolor;
+	private WebElement selectCarcolor;
 
 	@FindBy(xpath = "//div[@class='col-3 form-group']/ng-select[@formcontrolname='make']//input[@type='text']")
 	@CacheLookup
-	WebElement carMakeDropdown;
+	private WebElement carMakeDropdown;
+	
 	@FindBy(xpath = "//span[@class='ng-option-label ng-star-inserted']")
 	@CacheLookup
-	WebElement carMakeDropdownOptions;
+	private WebElement carMakeDropdownOptions;
 
 	@FindBy(xpath = "//div[contains(@id,'a94ed9d17181')]//span[contains(@class, 'ng-option-label ng-star-inserted')]")
 	@CacheLookup
-	WebElement carMake;
+	private WebElement carMake;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='model']/div/div/div[3]/input")
 	@CacheLookup
-	WebElement carModel;
+	private WebElement carModel;
 
 	@FindBy(xpath = "//input[@formcontrolname='licenseNo']")
 	@CacheLookup
-	WebElement enterLicenceno;
+	private WebElement enterLicenceno;
 
 	@FindBy(xpath = "//ng-select[@formcontrolname='state']//input[@type='text']")
 	@CacheLookup
-	WebElement Statedropdown;
+	private WebElement Statedropdown;
 
 	@FindBy(xpath = "//button[text()='Create Reservation']")
 	@CacheLookup
-	WebElement createReservationBtn;
+	private WebElement createReservationBtn;
 
 	@FindBy(xpath = "//div[@class='modal-content']/div[@class='p-3 m-auto']/div/button[text()='Ok']")
 	@CacheLookup
-	WebElement reservationSuccessBtn;
+	private WebElement reservationSuccessBtn;
 
 	@FindBy(xpath = "//label[normalize-space()='Reservation Created Successfully.']")
 	@CacheLookup
-	WebElement reservationSuccessTextMessage;
+	private WebElement reservationSuccessTextMessage;
 
 	@FindBy(xpath = "//span[@id='cell-515']//button[@title='Delete Reservation']")
 	@CacheLookup
-	WebElement deleteReservation;
+	private WebElement deleteReservation;
 
 	@FindBy(xpath = "//button[@title='Cancel Reservation']")
 	@CacheLookup
-	WebElement cancelReservation;
+	private WebElement cancelReservation;
 
 	@FindBy(xpath = "//div[@class='col-6 cursor']/i")
 	@CacheLookup
-	WebElement reservationDetailsArrowLeft;
+	private WebElement reservationDetailsArrowLeft;
+	
+	@FindBy(xpath = "//div[@role='combobox']")
+	@CacheLookup
+	private WebElement selectThirdPartySource;
+	
+	@FindBy(xpath = "//input[@formcontrolname='totalAmount']")
+	@CacheLookup
+	private WebElement totalAmount;
+	
+	@FindBy(xpath = "//input[@formcontrolname='prepaidAmount']")
+	@CacheLookup
+	private WebElement prepaidAmount;
+	
+	@FindBy(xpath = "//div[@class='modal-footer']//button[text()='Search']")
+	@CacheLookup
+	private WebElement searchBtn;
+	
+	@FindBy(xpath = "//input[@formcontrolname='confirmationNo']")
+	@CacheLookup
+	private WebElement enterConfirmationNumber;
+	
+	
+	@FindBy(xpath = "//button[contains(@class, 'btn-primary') and contains(text(),'Create Manually')]")
+	@CacheLookup
+	private WebElement createManually;
+	
 
 	public void enterFirstName() {
 		String firstName = faker.name().firstName();
@@ -182,6 +201,26 @@ public class AddReservationPage {
 		utilsObj.visibilityOf(selectLocationdropdown);
 		selectLocationdropdown.click();
 	}
+	public void selectLocationdropdown1() throws InterruptedException {
+		// Close modal if present
+		try {
+		    WebElement modalCloseButton = driver.findElement(By.xpath("//button[@class='close']"));
+		    if (modalCloseButton.isDisplayed()) {
+		        modalCloseButton.click();
+		        Thread.sleep(1000);
+		    }
+		} catch (Exception e) {
+		    System.out.println("No modal found.");
+		}
+
+		// Wait for modal to disappear
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("modal-backdrop")));
+
+		Thread.sleep(3000);
+		utilsObj.visibilityOfMoreWaitTime(selectLocationdropdown);
+		selectLocationdropdown.click();
+	}
 
 	public void selectLocation() throws InterruptedException {
 		Thread.sleep(3000);
@@ -196,7 +235,12 @@ public class AddReservationPage {
 		WebElement option = wait.until(ExpectedConditions.elementToBeClickable(optionLocator));
 		option.click();
 	}
-
+	
+	public void enterconfirmationNumber(String confirmationNum) {
+		System.out.println("The confrimation Number from Third Party"+confirmationNum );
+		confirmationNumber.sendKeys(confirmationNum);
+	}
+	
 	public void enterstartDate() {
 		enterstartDate.sendKeys("04/21/2025");
 	}
@@ -206,28 +250,40 @@ public class AddReservationPage {
 	}
 
 	public void enterEndDate() {
-		enterEndDate.sendKeys("04/25/2025");
+		enterEndDate.sendKeys("04/22/2025");
 	}
 
 	public void enterEndTime() {
 		enterEndTime.sendKeys("10:00 AM");
 	}
 
-//	public void selectNonprepaid() {
-//		utilsObj.elementToBeClickableWaitTime(selectNonprepaid);
-//
-//		selectNonprepaid.click();
-//	}
-
-	public void selectReservation(String prepaid) {
-		reservationPrepaidDropdown.click();
-		reservationInputField.sendKeys(prepaid,Keys.ENTER);
+	public void selectReservationPrepaidOrPartial2(String color) {
+		System.out.println("The excel color **********" + color);
+		prepaidPartial.sendKeys(color, Keys.ENTER);
+	}
+	
+	public void enterTotalAmount() {
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	WebElement totalAmountField = wait.until(ExpectedConditions.visibilityOf(totalAmount));
+	totalAmountField.sendKeys("20");
+	}
+	public void enterPrepaidAmount() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement totalAmountField = wait.until(ExpectedConditions.visibilityOf(prepaidAmount));
+		totalAmountField.sendKeys("8");
+	}
+	public void clicksearchBtn() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
+		searchButton.click();
+	}
+	
+	public void enterConfirmationNumber(String ConfirmationNum) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement confirmationField = wait.until(ExpectedConditions.visibilityOf(enterConfirmationNumber));
+		confirmationField.sendKeys(ConfirmationNum); 
 	}
 
-	public void selectNonprepaidokay() {
-
-		selectNonprepaidokay.click();
-	}
 
 	public void clickAddVehicle() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -245,7 +301,7 @@ public class AddReservationPage {
 		System.out.println("The excel color **********" + color);
 		selectCarcolor.sendKeys(color, Keys.ENTER);
 	}
-
+	
 	public void clickCarMakeDropdown() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("overlay")));
@@ -259,18 +315,17 @@ public class AddReservationPage {
 	private static final By CAR_MODEL_DROPDOWN = By
 			.xpath("//div[@class='col-3 form-group']/ng-select[@formcontrolname='model']//input[@type='text']");
 
-	// Method to select car model from dropdown
-	public void selectCarModel1(String carModel) {
+	
+	public void selectCarModel(String carModel) {
 
 		WebElement modelDropdown = wait.until(ExpectedConditions.elementToBeClickable(CAR_MODEL_DROPDOWN));
 		modelDropdown.click();
 
-		// Wait for options to appear and select the correct one
+		
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		List<WebElement> options = wait
 				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(CAR_MODEL_DROPDOWN_OPTIONS));
 		for (WebElement option : options) {
-			System.out.println("The Car_Model_DropDown_Option_List : " + option.getText());
 			if (option.getText().equalsIgnoreCase(carModel)) {
 				option.click();
 				break;
@@ -282,11 +337,10 @@ public class AddReservationPage {
 			.xpath("//div[@class='col-3 form-group']/ng-select[@formcontrolname='make']//input[@type='text']");
 	private static final By CAR_MAKE_DROPDOWN_OPTIONS = By.xpath("//span[@class='ng-option-label ng-star-inserted']");
 
-	public void selectCarMake1(String carMake) {
+	public void selectCarMake(String carMake) {
 		WebElement makeDropdown = wait.until(ExpectedConditions.elementToBeClickable(CAR_MAKE_DROPDOWN));
 		makeDropdown.click();
 
-		// Get all dropdown options
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		List<WebElement> options = wait
 				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(CAR_MAKE_DROPDOWN_OPTIONS));
@@ -294,8 +348,7 @@ public class AddReservationPage {
 		for (WebElement option : options) {
 			if (option.getText().equalsIgnoreCase(carMake)) {
 				option.click();
-				System.out.println("Selected: " + carMake);
-				break; // Exit inner loop once the match is found
+				break; 
 			}
 		}
 	}
@@ -334,13 +387,21 @@ public class AddReservationPage {
 		utilsObj.visibilityOfExtraWaitTime(deleteReservation);
 		deleteReservation.click();
 	}
+	public void clickThirdPartySource() {
+		utilsObj.visibilityOfExtraWaitTime(selectThirdPartySource);
+		selectThirdPartySource.click();
+	}
+	public void clickcreateManually() {
+		utilsObj.visibilityOfExtraWaitTime(createManually);
+		createManually.click();
+	}
 
 	public AddReservationPage(WebDriver driver) {
 		if (driver == null) {
 			throw new IllegalArgumentException("Driver instance cannot be null");
 		}
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initialize wait
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
 		PageFactory.initElements(driver, this);
 	}
 }

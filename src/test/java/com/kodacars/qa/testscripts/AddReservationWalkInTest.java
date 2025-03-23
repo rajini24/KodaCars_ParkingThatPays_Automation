@@ -62,9 +62,8 @@ public class AddReservationWalkInTest extends BaseClass {
 		reservationObj.carColordropdown();
 		reservationObj.selectCarcolor(carColor);
 		reservationObj.clickCarMakeDropdown();
-		reservationObj.selectCarMake1(carMake);
-		reservationObj.selectCarModel1(carModel);
-		
+		reservationObj.selectCarMake(carMake);
+		reservationObj.selectCarModel(carModel);
 		reservationObj.selectLicenceno(license);
 		reservationObj.selectState(state);
 	//	reservationObj.clickCreateReservation();

@@ -5,24 +5,24 @@
       <![CDATA[onStart method Test]]>
     </line>
     <line>
-      <![CDATA[AddReservationForKoda Test is starting.]]>
+      <![CDATA[AddReservationForThirdPartyCreateManually Test is starting.]]>
     </line>
     <line>
-      <![CDATA[AddReservationForKoda Test is succeed.]]>
+      <![CDATA[AddReservationForThirdPartyCreateManually Test is succeed.]]>
     </line>
     <line>
-      <![CDATA[AddReservationForKoda Test is starting.]]>
+      <![CDATA[AddReservationConfirmationNumberSearch Test is starting.]]>
     </line>
     <line>
-      <![CDATA[AddReservationForKoda Test is succeed.]]>
+      <![CDATA[AddReservationConfirmationNumberSearch Test is succeed.]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-18T18:33:23 CDT" name="Suite" finished-at="2025-03-18T18:35:10 CDT" duration-ms="106231">
+  <suite started-at="2025-03-23T13:26:20 CDT" name="Suite" finished-at="2025-03-23T13:27:27 CDT" duration-ms="66980">
     <groups>
     </groups>
-    <test started-at="2025-03-18T18:33:23 CDT" name="Test" finished-at="2025-03-18T18:35:10 CDT" duration-ms="106231">
-      <class name="com.kodacars.qa.testscripts.AddReservationKodaTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:33:25 CDT" name="setup" finished-at="2025-03-18T18:33:28 CDT" duration-ms="3803" status="PASS">
+    <test started-at="2025-03-23T13:26:20 CDT" name="Test" finished-at="2025-03-23T13:27:27 CDT" duration-ms="66980">
+      <class name="com.kodacars.qa.testscripts.AddReservationThirdParyTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationThirdParyTest@1ab06251]" started-at="2025-03-23T13:26:21 CDT" name="setup" finished-at="2025-03-23T13:26:25 CDT" duration-ms="3695" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,28 +33,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddReservationForKoda(java.util.Map)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:33:29 CDT" name="AddReservationForKoda" data-provider="KodaAddVehicle" finished-at="2025-03-18T18:34:18 CDT" duration-ms="49813" status="PASS">
+        <test-method signature="AddReservationForThirdPartyCreateManually(java.util.Map)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationThirdParyTest@1ab06251]" started-at="2025-03-23T13:26:25 CDT" name="AddReservationForThirdPartyCreateManually" data-provider="ThirdpartyManuallyCreateConfirmationNumber" finished-at="2025-03-23T13:27:14 CDT" duration-ms="49689" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{License Plate=Il75486, State=Illinois, Car Color=Black, Model=Avalon, Reservation Prepaid=Non Prepaid, Make=Toyota, Select Source=Koda}]]>
+                <![CDATA[{License Plate=Il75486, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP45615, Select Source=CheapAirportParking}]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[AddReservationForKoda Test is starting.]]>
+              <![CDATA[AddReservationForThirdPartyCreateManually Test is starting.]]>
             </line>
             <line>
-              <![CDATA[AddReservationForKoda Test is succeed.]]>
+              <![CDATA[AddReservationForThirdPartyCreateManually Test is succeed.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AddReservationForKoda -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:34:18 CDT" name="close" finished-at="2025-03-18T18:34:18 CDT" duration-ms="4" status="PASS">
+        </test-method> <!-- AddReservationForThirdPartyCreateManually -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationThirdParyTest@1ab06251]" started-at="2025-03-23T13:27:14 CDT" name="close" finished-at="2025-03-23T13:27:14 CDT" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:34:18 CDT" name="setup" finished-at="2025-03-18T18:34:22 CDT" duration-ms="3134" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationThirdParyTest@1ab06251]" started-at="2025-03-23T13:27:16 CDT" name="setup" finished-at="2025-03-23T13:27:19 CDT" duration-ms="3392" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -65,28 +65,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddReservationForKoda(java.util.Map)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:34:22 CDT" name="AddReservationForKoda" data-provider="KodaAddVehicle" finished-at="2025-03-18T18:35:10 CDT" duration-ms="48083" status="PASS">
+        <test-method signature="AddReservationConfirmationNumberSearch(java.util.Map)[pri:1, instance:com.kodacars.qa.testscripts.AddReservationThirdParyTest@1ab06251]" started-at="2025-03-23T13:27:19 CDT" name="AddReservationConfirmationNumberSearch" data-provider="SearchThirdpartyConfirmationNumber" finished-at="2025-03-23T13:27:27 CDT" duration-ms="7609" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{License Plate=Il75486, State=Arizona, Car Color=Black, Model=Echo, Reservation Prepaid=Prepaid/Partial, Make=Toyota, Select Source=Koda}]]>
+                <![CDATA[{License Plate=Il75486, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP45615, Select Source=CheapAirportParking}]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[AddReservationForKoda Test is starting.]]>
+              <![CDATA[AddReservationConfirmationNumberSearch Test is starting.]]>
             </line>
             <line>
-              <![CDATA[AddReservationForKoda Test is succeed.]]>
+              <![CDATA[AddReservationConfirmationNumberSearch Test is succeed.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- AddReservationForKoda -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaTest@3f67593e]" started-at="2025-03-18T18:35:10 CDT" name="close" finished-at="2025-03-18T18:35:10 CDT" duration-ms="3" status="PASS">
+        </test-method> <!-- AddReservationConfirmationNumberSearch -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationThirdParyTest@1ab06251]" started-at="2025-03-23T13:27:27 CDT" name="close" finished-at="2025-03-23T13:27:27 CDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.kodacars.qa.testscripts.AddReservationKodaTest -->
+      </class> <!-- com.kodacars.qa.testscripts.AddReservationThirdParyTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

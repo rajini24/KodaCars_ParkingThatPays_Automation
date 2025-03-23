@@ -23,9 +23,9 @@ public class AddVehiclePage {
 	@FindBy(xpath = "//div[contains(@class, 'ng-option')]")
 	private List<WebElement> dropdownOptions;
 
-	// Method to get text of all dropdown options
+	
 	public void printDropdownOptions() {
-		// Wait for elements to be visible
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElements(dropdownOptions));
 
