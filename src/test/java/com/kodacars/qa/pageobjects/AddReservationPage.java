@@ -167,6 +167,28 @@ public class AddReservationPage {
 	@CacheLookup
 	private WebElement createManually;
 	
+	//Reservation Link 
+	@FindBy(xpath = "//div[@class='text-center mt-4']//button[text()='Receive Payment']")
+	@CacheLookup
+	private WebElement clickReceivePayment;
+	
+	@FindBy(xpath = "//span[contains(@class, 'p-dropdown-label') and text()='Select Payment Mode']")
+	@CacheLookup
+	private WebElement selectPaymentMode;
+	
+	@FindBy(xpath = "//li[@role='option']//span[text()='Cash']")
+	@CacheLookup
+	private WebElement selectCash;
+	
+	@FindBy(xpath = "//button[@id='closeModal' and text()='Collect Payment']")
+	@CacheLookup
+	private WebElement collectPayment;
+	
+	@FindBy(xpath = "//div[@class='swal2-actions']//button[contains(@class, 'swal2-confirm')]")
+	@CacheLookup
+	private WebElement paymentReceivedSuccessfully;
+	
+	
 
 	public void enterFirstName() {
 		String firstName = faker.name().firstName();
@@ -394,6 +416,26 @@ public class AddReservationPage {
 	public void clickcreateManually() {
 		utilsObj.visibilityOfExtraWaitTime(createManually);
 		createManually.click();
+	}
+	public void clickReceivePayment() {
+		utilsObj.visibilityOfExtraWaitTime(clickReceivePayment);
+		clickReceivePayment.click();
+	}
+	public void selectPaymentMode() {
+		utilsObj.visibilityOfExtraWaitTime(selectPaymentMode);
+		selectPaymentMode.click();
+	}
+	public void selectCash() {
+		utilsObj.visibilityOf(selectCash);
+		selectCash.click();
+	}
+	public void clickcollectPayment() {
+		utilsObj.visibilityOfExtraWaitTime(collectPayment);
+		collectPayment.click();
+	}
+	public void clickpaymentReceivedSuccessfully() {
+		utilsObj.visibilityOfExtraWaitTime(paymentReceivedSuccessfully);
+		paymentReceivedSuccessfully.click();
 	}
 
 	public AddReservationPage(WebDriver driver) {

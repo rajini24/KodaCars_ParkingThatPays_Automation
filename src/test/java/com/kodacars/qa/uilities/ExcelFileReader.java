@@ -42,18 +42,13 @@ public class ExcelFileReader {
 					"Cell at row " + rowNumber + ", column " + cellNumber + " does not exist.");
 		}
 
-		//return cell.getStringCellValue();
 		// Handle different cell types
 	    switch (cell.getCellType()) {
 	        case STRING:
 	            return cell.getStringCellValue();
 	        case NUMERIC:
 	            return String.valueOf(cell.getNumericCellValue()); // Convert numeric to string
-	        case BOOLEAN:
-	            return String.valueOf(cell.getBooleanCellValue()); // Convert boolean to string
-	        case FORMULA:
-	            return cell.getCellFormula(); // Return the formula as a string
-	        case BLANK:
+	         case BLANK:
 	            return ""; // Return an empty string if the cell is blank
 	        default:
 	            return "Unsupported Cell Type"; // Handle unexpected types

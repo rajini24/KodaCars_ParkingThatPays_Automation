@@ -11,12 +11,14 @@
 		<!--	<class name="com.kodacars.qa.testscripts.LoginTest" /> 
 		<class name="com.kodacars.qa.testscripts.AddVehicleTest" />
 		<class name="com.kodacars.qa.testscripts.AddReservationTest" />
+		<class name="com.kodacars.qa.testscripts.AddReservationThirdParyTest" />
 		
 		-->
 		
 			
 			
-			<class name="com.kodacars.qa.testscripts.AddReservationThirdParyTest" />
+			
+			<class name="com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest" />
 		
 				
 		</classes>

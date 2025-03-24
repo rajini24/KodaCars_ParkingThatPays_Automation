@@ -18,8 +18,6 @@ public class DashboardPage {
 	WebDriverWait wait;
 	CommonUtils utilsObj = CommonUtils.getInstance();
 
-	
-
 	@FindBy(xpath = "//button[text()=' Add Reservation ']")
 	@CacheLookup
 	private WebElement addReservation;
@@ -27,13 +25,16 @@ public class DashboardPage {
 	@FindBy(xpath = "//button[text()='No']")
 	@CacheLookup
 	private WebElement clickNoConfirmation;
-	
+
 	@FindBy(xpath = "//button[text()='Yes']")
 	@CacheLookup
 	private WebElement clickYesConfirmation;
-	
-	
 
+	@FindBy(xpath = "//span[starts-with(@id, 'cell-') and text()='BRHM1063012']")
+	@CacheLookup
+	private WebElement clickReservationLink;
+	
+	
 	public void clickAddReservation() {
 		utilsObj.visibilityOfMoreWaitTime(addReservation);
 		addReservation.click();
@@ -49,13 +50,19 @@ public class DashboardPage {
 		return new AddReservationPage(driver);
 
 	}
+
 	public AddReservationPage clickYesConfirmation() {
 		utilsObj.visibilityOfMoreWaitTime(clickYesConfirmation);
 		clickYesConfirmation.click();
 		return new AddReservationPage(driver);
-		
 	}
-	
+
+	public AddReservationPage clickReservationLink() {
+		utilsObj.visibilityOfMoreWaitTime(clickReservationLink);
+		clickReservationLink.click();
+		return new AddReservationPage(driver);
+	}
+
 	public DashboardPage(WebDriver driver) {
 
 		if (driver == null) {

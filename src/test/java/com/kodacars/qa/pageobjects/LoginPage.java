@@ -51,7 +51,7 @@ public class LoginPage {
 		if (driver == null) {
 			throw new IllegalArgumentException("Driver instance cannot be null");
 		}
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initialize wait
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
