@@ -16,7 +16,7 @@ import com.kodacars.qa.uilities.CommonUtils;
 public class AddVehiclePage {
 	WebDriverWait wait;
 	WebDriver driver;
-	CommonUtils utilsObj = CommonUtils.getInstance();
+	CommonUtils utilsObj = CommonUtils.getInstance(driver);
 
 	
 

@@ -10,20 +10,24 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonUtils {
 
-	WebDriver driver;
-	String pagetitle;
-	WebDriverWait wait;
+	private WebDriver driver;
+	private String pagetitle;
+	private WebDriverWait wait;
 	private static CommonUtils utilsObj = null;
 
-	private CommonUtils() {
+//	private CommonUtils() {
+//
+//	}
+	private CommonUtils(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
+    }
 
-	}
-
-	public static CommonUtils getInstance() {
+	public static CommonUtils getInstance(WebDriver driver) {
 		if (utilsObj != null) {
 			return utilsObj;
 		} else {
-			utilsObj = new CommonUtils();
+			utilsObj = new CommonUtils(driver);
 			return utilsObj;
 		}
 	}
@@ -41,6 +45,11 @@ public class CommonUtils {
 	public void visibilityOfExtraWaitTime(WebElement webElementName) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		wait.until(ExpectedConditions.visibilityOf(webElementName));
+	}
+
+	public void visibilityOfExtraWaitTimeout(WebDriver driver, WebElement element, int timeout) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	    wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	public void elementToBeClickableWaitTime(WebElement webElementName) {

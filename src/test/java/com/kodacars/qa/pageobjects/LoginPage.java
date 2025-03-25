@@ -14,7 +14,7 @@ import com.kodacars.qa.uilities.CommonUtils;
 public class LoginPage {
 	WebDriver driver;
 	WebDriverWait wait;
-	CommonUtils utilsObj = CommonUtils.getInstance();
+	CommonUtils utilsObj = CommonUtils.getInstance(driver);
 	
 	
 

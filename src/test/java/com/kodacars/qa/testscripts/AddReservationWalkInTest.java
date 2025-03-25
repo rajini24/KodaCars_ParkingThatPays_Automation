@@ -19,7 +19,7 @@ public class AddReservationWalkInTest extends BaseClass {
 
 	
 	//Walk-in Customer
-	@Test(dataProvider = "Walk-In",dataProviderClass=AddVehicleWalkInDataProvider.class)
+	@Test(dataProvider = "WalkIn",dataProviderClass=AddVehicleWalkInDataProvider.class)
 	
 	public void AddReservationForWalkIn(Map<String, String> rowData) throws InterruptedException {
 

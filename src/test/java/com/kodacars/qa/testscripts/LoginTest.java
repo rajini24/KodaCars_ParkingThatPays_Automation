@@ -3,7 +3,6 @@ package com.kodacars.qa.testscripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.kodacars.qa.pageobjects.AddReservationPage;
 import com.kodacars.qa.pageobjects.DashboardPage;
 import com.kodacars.qa.pageobjects.LoginPage;
 import com.kodacars.qa.testbase.BaseClass;

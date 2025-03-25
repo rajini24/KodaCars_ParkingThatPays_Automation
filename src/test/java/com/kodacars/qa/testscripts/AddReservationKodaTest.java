@@ -56,7 +56,7 @@ public class AddReservationKodaTest extends BaseClass {
 		reservationObj.enterstartTime();
 		reservationObj.enterEndDate();
 		reservationObj.enterEndTime();
-		//reservationObj.selectReservation(selectPrepaid);
+		reservationObj.selectReservationPrepaid(selectPrepaid);
 
 		// Add Vehicle Details
 		reservationObj.clickAddVehicle();

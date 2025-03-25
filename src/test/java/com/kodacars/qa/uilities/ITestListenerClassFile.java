@@ -55,8 +55,8 @@ public class ITestListenerClassFile extends BaseClass implements ITestListener {
 		WebDriver driver = ((BaseClass) testClass).driver;
 
 		// add screenshot to target folder
-		System.out.println(" result.getName " + result.getName());
-		String screenshot = getScreenshot(result.getName(), driver);
+//		System.out.println(" result.getName " + result.getName());
+//		String screenshot = getScreenshot(result.getName(), driver);
 
 		// allure screenshot
 		if (driver instanceof WebDriver) {
@@ -66,7 +66,7 @@ public class ITestListenerClassFile extends BaseClass implements ITestListener {
 
 		//final byte[] screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 		ChainTestListener.log(result.getName() + " testcase failed "); // logs for failed test cases
-		ChainTestListener.embed(screenshot, "image/png"); // to attach screenshot for failed test cases
+	//	ChainTestListener.embed(screenshot, "image/png"); // to attach screenshot for failed test cases
 	}
 
 	@Override
@@ -94,18 +94,68 @@ public class ITestListenerClassFile extends BaseClass implements ITestListener {
 		Reporter.log("onFinish method " + context.getName());
 	}
 
+//	public String getScreenshot(String testName, WebDriver driver) {
+//		
+//		if (driver instanceof TakesScreenshot) {
+//		    TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+//		    File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//		} else {
+//		    System.out.println("Driver does not support taking screenshots");
+//		}
+//
+//		System.out.println("getScreenshot " + testName);
+//		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+//		File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//		String screenshotPath = "target/Screenshots/screenshots" + testName + ".png";
+//		try {
+//			FileUtils.copyFile(screenshot, new File(screenshotPath));
+//		} catch (Exception e) {
+//			System.out.println("Takes Screenshot is null");
+//			e.printStackTrace();
+//		}
+//		return screenshotPath;
+//	}
+//	public String getScreenshot(String testName, WebDriver driver) {
+//	    if (driver == null) {
+//	        System.out.println("WebDriver is null. Cannot take a screenshot.");
+//	        return null;
+//	    }
+//
+//	    if (!(driver instanceof TakesScreenshot)) {
+//	        System.out.println("Driver does not support taking screenshots");
+//	        return null;
+//	    }
+//
+//	    try {
+//	        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+//	        File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//	        String screenshotPath = "target/Screenshots/" + testName + ".png";
+//	        
+//	        FileUtils.copyFile(screenshot, new File(screenshotPath));
+//	        System.out.println("Screenshot saved: " + screenshotPath);
+//	        
+//	        return screenshotPath;
+//	    } catch (Exception e) {
+//	        System.out.println("Failed to take screenshot for test: " + testName);
+//	        e.printStackTrace();
+//	        return null;
+//	    }
+//	}
 	public String getScreenshot(String testName, WebDriver driver) {
-		System.out.println("getScreenshot " + testName);
-		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-		File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String screenshotPath = "target/Screenshots/screenshots" + testName + ".png";
-		try {
-			FileUtils.copyFile(screenshot, new File(screenshotPath));
-		} catch (Exception e) {
-			System.out.println("Takes Screenshot is null");
-			e.printStackTrace();
-		}
-		return screenshotPath;
+	    if (driver == null) {
+	        System.out.println("WebDriver is null. Cannot take a screenshot.");
+	        return null;
+	    }
+	    TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+	    File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
+	    String screenshotPath = "target/Screenshots/" + testName + ".png";
+	    try {
+	        FileUtils.copyFile(screenshot, new File(screenshotPath));
+	    } catch (Exception e) {
+	        System.out.println("Failed to save screenshot");
+	        e.printStackTrace();
+	    }
+	    return screenshotPath;
 	}
 
 }

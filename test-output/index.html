@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest" class="method navigator-link" hash-for-method="DashboardThirdPartyReservationLink">DashboardThirdPartyReservationLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,32 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest" class="method navigator-link" hash-for-method="DashboardThirdPartyReservationLink">DashboardThirdPartyReservationLink</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.AddReservationThirdParyTest" class="method navigator-link" hash-for-method="AddReservationConfirmationNumberSearch({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)">AddReservationConfirmationNumberSearch({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.AddReservationKodaTest" class="method navigator-link" hash-for-method="AddReservationForKoda({License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non...)">AddReservationForKoda({License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.AddReservationKodaTest" class="method navigator-link" hash-for-method="AddReservationForKoda({License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepai...)">AddReservationForKoda({License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepai...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.AddReservationThirdParyTest" class="method navigator-link" hash-for-method="AddReservationForThirdPartyCreateManually({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)">AddReservationForThirdPartyCreateManually({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.AddReservationWalkInTest" class="method navigator-link" hash-for-method="AddReservationForWalkIn({Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=...)">AddReservationForWalkIn({Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.kodacars.qa.testscripts.AddReservationWalkInTest" class="method navigator-link" hash-for-method="AddReservationForWalkIn({Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=Wh...)">AddReservationForWalkIn({Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=Wh...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -118,9 +157,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,6 +168,110 @@
                   <a name="DashboardThirdPartyReservationLink">
                   </a> <!-- DashboardThirdPartyReservationLink -->
                   <span class="method-name">DashboardThirdPartyReservationLink</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //button[contains(text(),&apos;Receive Payment&apos;)] (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.kodacars.qa.pageobjects.AddReservationPage.clickReceivePayment(AddReservationPage.java:468)
+	at com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest.DashboardThirdPartyReservationLink(ThirdPartyReservationLinkTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Receive Payment&apos;)]&quot;}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8e64c75ab587da8cd98418c1638eaf67, findElement {value=//button[contains(text(),&apos;Receive Payment&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55588}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55588/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8e64c75ab587da8cd98418c1638eaf67
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 28 more
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.kodacars.qa.testscripts.AddReservationThirdParyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddReservationConfirmationNumberSearch({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)">
+                  </a> <!-- AddReservationConfirmationNumberSearch({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...) -->
+                  <span class="method-name">AddReservationConfirmationNumberSearch</span>
+                  <span class="parameters">({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP25612, Select Source=CheapAirportParking})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddReservationForThirdPartyCreateManually({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)">
+                  </a> <!-- AddReservationForThirdPartyCreateManually({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...) -->
+                  <span class="method-name">AddReservationForThirdPartyCreateManually</span>
+                  <span class="parameters">({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP25612, Select Source=CheapAirportParking})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.kodacars.qa.testscripts.AddReservationKodaTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddReservationForKoda({License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non...)">
+                  </a> <!-- AddReservationForKoda({License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non...) -->
+                  <span class="method-name">AddReservationForKoda</span>
+                  <span class="parameters">({License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non Prepaid, Make=Toyota, Select Source=Koda})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddReservationForKoda({License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepai...)">
+                  </a> <!-- AddReservationForKoda({License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepai...) -->
+                  <span class="method-name">AddReservationForKoda</span>
+                  <span class="parameters">({License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepaid, Make=Toyota, Select Source=Koda})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.kodacars.qa.testscripts.AddReservationWalkInTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddReservationForWalkIn({Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=...)">
+                  </a> <!-- AddReservationForWalkIn({Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=...) -->
+                  <span class="method-name">AddReservationForWalkIn</span>
+                  <span class="parameters">({Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=Black})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddReservationForWalkIn({Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=Wh...)">
+                  </a> <!-- AddReservationForWalkIn({Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=Wh...) -->
+                  <span class="method-name">AddReservationForWalkIn</span>
+                  <span class="parameters">({Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=White})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,6 +291,9 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.kodacars.qa.testscripts.AddReservationWalkInTest&quot;/&gt;
+      &lt;class name=&quot;com.kodacars.qa.testscripts.AddReservationKodaTest&quot;/&gt;
+      &lt;class name=&quot;com.kodacars.qa.testscripts.AddReservationThirdParyTest&quot;/&gt;
       &lt;class name=&quot;com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -162,7 +308,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,16 +334,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'DashboardThirdPartyReservationLink')
 data.setCell(0, 2, 'com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest')
-data.setCell(0, 3, 14618);
+data.setCell(0, 3, 88219);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'AddReservationForThirdPartyCreateManually')
+data.setCell(1, 2, 'com.kodacars.qa.testscripts.AddReservationThirdParyTest')
+data.setCell(1, 3, 69036);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'AddReservationForKoda')
+data.setCell(2, 2, 'com.kodacars.qa.testscripts.AddReservationKodaTest')
+data.setCell(2, 3, 52269);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'AddReservationForKoda')
+data.setCell(3, 2, 'com.kodacars.qa.testscripts.AddReservationKodaTest')
+data.setCell(3, 3, 50960);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'AddReservationForWalkIn')
+data.setCell(4, 2, 'com.kodacars.qa.testscripts.AddReservationWalkInTest')
+data.setCell(4, 3, 49720);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'AddReservationForWalkIn')
+data.setCell(5, 2, 'com.kodacars.qa.testscripts.AddReservationWalkInTest')
+data.setCell(5, 3, 47930);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'AddReservationConfirmationNumberSearch')
+data.setCell(6, 2, 'com.kodacars.qa.testscripts.AddReservationThirdParyTest')
+data.setCell(6, 3, 12162);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -209,10 +379,52 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
+              <span class="reporter-method-name">AddReservationForWalkIn({Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">AddReservationForWalkIn Test is starting.</span>
+                <span class="reporter-method-output">AddReservationForWalkIn Test is succeed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddReservationForThirdPartyCreateManually({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">AddReservationForThirdPartyCreateManually Test is starting.</span>
+                <span class="reporter-method-output">AddReservationForThirdPartyCreateManually Test is succeed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddReservationForKoda({License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">AddReservationForKoda Test is starting.</span>
+                <span class="reporter-method-output">AddReservationForKoda Test is succeed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddReservationForKoda({License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepai...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">AddReservationForKoda Test is starting.</span>
+                <span class="reporter-method-output">AddReservationForKoda Test is succeed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddReservationForWalkIn({Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=Wh...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">AddReservationForWalkIn Test is starting.</span>
+                <span class="reporter-method-output">AddReservationForWalkIn Test is succeed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddReservationConfirmationNumberSearch({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">AddReservationConfirmationNumberSearch Test is starting.</span>
+                <span class="reporter-method-output">AddReservationConfirmationNumberSearch Test is succeed.</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">DashboardThirdPartyReservationLink</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">DashboardThirdPartyReservationLink Test is starting.</span>
-                <span class="reporter-method-output">DashboardThirdPartyReservationLink Test is succeed.</span>
+                <span class="reporter-method-output">onTestFailureDashboardThirdPartyReservationLink</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -230,18 +442,101 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.kodacars.qa.testscripts.AddReservationWalkInTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">DashboardThirdPartyReservationLink</span>
-                <span class="method-start">5975 ms</span>
+                <span class="method-name">AddReservationForWalkIn({Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=...)</span>
+                <span class="method-start">2545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">20678 ms</span>
+                <span class="method-start">52307 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(Chrome)</span>
+                <span class="method-start">52832 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddReservationForWalkIn({Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=Wh...)</span>
+                <span class="method-start">54630 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">102569 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.kodacars.qa.testscripts.AddReservationKodaTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(Chrome)</span>
+                <span class="method-start">104850 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddReservationForKoda({License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non...)</span>
+                <span class="method-start">108267 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">159236 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(Chrome)</span>
+                <span class="method-start">160418 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddReservationForKoda({License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepai...)</span>
+                <span class="method-start">163582 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">215985 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.kodacars.qa.testscripts.AddReservationThirdParyTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(Chrome)</span>
+                <span class="method-start">218174 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddReservationForThirdPartyCreateManually({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</span>
+                <span class="method-start">221389 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">290431 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(Chrome)</span>
+                <span class="method-start">292790 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddReservationConfirmationNumberSearch({License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</span>
+                <span class="method-start">296332 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">308519 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(Chrome)</span>
+                <span class="method-start">310076 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">DashboardThirdPartyReservationLink</span>
+                <span class="method-start">313259 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">401702 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

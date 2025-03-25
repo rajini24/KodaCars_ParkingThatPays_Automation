@@ -3,11 +3,14 @@ package com.kodacars.qa.pageobjects;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.kodacars.qa.uilities.CommonUtils;
@@ -16,7 +19,7 @@ public class DashboardPage {
 
 	WebDriver driver;
 	WebDriverWait wait;
-	CommonUtils utilsObj = CommonUtils.getInstance();
+	CommonUtils utilsObj = CommonUtils.getInstance(driver);
 
 	@FindBy(xpath = "//button[text()=' Add Reservation ']")
 	@CacheLookup
@@ -30,15 +33,15 @@ public class DashboardPage {
 	@CacheLookup
 	private WebElement clickYesConfirmation;
 
-	@FindBy(xpath = "//span[starts-with(@id, 'cell-') and text()='BRHM1063012']")
+	@FindBy(xpath = "//span[starts-with(@id, 'cell-') and text()='CHAP25612']")
 	@CacheLookup
 	private WebElement clickReservationLink;
 	
 	
-	public void clickAddReservation() {
-		utilsObj.visibilityOfMoreWaitTime(addReservation);
-		addReservation.click();
-	}
+//	public void clickAddReservation() {
+//		utilsObj.visibilityOfMoreWaitTime(addReservation);
+//		addReservation.click();
+//	}
 
 	public boolean isAddReservationBtnDisplayed() {
 		return addReservation.isDisplayed();
@@ -58,10 +61,32 @@ public class DashboardPage {
 	}
 
 	public AddReservationPage clickReservationLink() {
-		utilsObj.visibilityOfMoreWaitTime(clickReservationLink);
+		utilsObj.visibilityOfExtraWaitTime(clickReservationLink);
 		clickReservationLink.click();
 		return new AddReservationPage(driver);
 	}
+	public void clickAddReservation() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+	    // Ensure modal or overlay disappears before clicking
+	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("modal-backdrop")));
+
+	    // Scroll to the button (if needed)
+	    WebElement addReservationButton = driver.findElement(By.xpath("//button[text()=' Add Reservation ']"));
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addReservationButton);
+
+	    // Wait until clickable
+	    wait.until(ExpectedConditions.elementToBeClickable(addReservationButton));
+
+	    // Click using JavaScript if normal click fails
+	    try {
+	        addReservationButton.click();
+	    } catch (ElementClickInterceptedException e) {
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", addReservationButton);
+	    }
+	}
+
+
 
 	public DashboardPage(WebDriver driver) {
 
