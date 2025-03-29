@@ -7,24 +7,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelFileReader {
-	private Workbook workbook;
+public class ExcelUtility {
+	private static Workbook workbook;
 
-	public ExcelFileReader(String filePath) throws IOException {
+	public ExcelUtility(String filePath) throws IOException {
 		FileInputStream fis = new FileInputStream(Paths.get(filePath).toFile());
 		workbook = new XSSFWorkbook(fis);
 	}
 
-	public String getCellData(String sheetName, int rowNumber, int cellNumber) {
+	public static String getCellData(String sheetName, int rowNumber, int cellNumber) {
 		Sheet sheet = workbook.getSheet(sheetName);
 
 		if (sheet == null) {
@@ -55,12 +51,12 @@ public class ExcelFileReader {
 	    }
 	}
 
-	public void close() throws IOException {
+	public static void close() throws IOException {
 		workbook.close();
 	}
 	
 	// Method to get the total number of rows in a sheet
-    public int getRowCount(String sheetName) {
+    public static int getRowCount(String sheetName) {
         Sheet sheet = workbook.getSheet(sheetName);
         if (sheet == null) {
             throw new IllegalArgumentException("Sheet " + sheetName + " does not exist.");
@@ -69,7 +65,7 @@ public class ExcelFileReader {
     }
     
     // Method to get the total number of columns in the first row of the sheet
-    public int getColumnCount(String sheetName) {
+    public static int getColumnCount(String sheetName) {
         Sheet sheet = workbook.getSheet(sheetName);
         if (sheet == null) {
             throw new IllegalArgumentException("Sheet " + sheetName + " does not exist.");
@@ -85,5 +81,32 @@ public class ExcelFileReader {
         return firstRow.getPhysicalNumberOfCells();
     }
 
+    public static Object[][] getAllRows(String sheetName) {
+	    try {
+	      //  ExcelFileReader excelReader = new ExcelFileReader(ConfigFileReader.getExcelPath());
+	    	//ConfigFileReader.getExcelPath();
+	        int rowCount = getRowCount(sheetName);
+	        int colCount = getColumnCount(sheetName);
+
+	        Object[][] data = new Object[rowCount][1]; // Each row is a Map
+
+	        for (int i = 1; i <= rowCount; i++) { // Assuming row 0 is the header
+	            Map<String, String> rowData = new HashMap<>();
+	            for (int j = 0; j < colCount; j++) {
+	                String columnName = getCellData(sheetName, 0, j); // Column header
+	                String cellValue = getCellData(sheetName, i, j); // Cell value
+	                rowData.put(columnName, cellValue);
+	            }
+	            data[i - 1][0] = rowData; // Each row in the Object[][] array contains a Map
+	        }
+	        close();
+	        return data;
+	    } catch (IOException e) {
+	        LoggerLoad.error("Failed to read data from Excel");
+	        throw new RuntimeException("Failed due to IO error", e);
+	    }
+	}
+    
+    
     
 }

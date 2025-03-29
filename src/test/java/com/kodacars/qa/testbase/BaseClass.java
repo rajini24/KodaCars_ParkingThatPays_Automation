@@ -20,8 +20,8 @@ import com.kodacars.qa.uilities.ITestListenerClassFile;
 @Listeners({ChainTestListener.class,ITestListenerClassFile.class})
 public class BaseClass {
 	public WebDriver driver;
-	protected DashboardPage dashboardObj;
-	protected LoginPage loginObj;
+//	protected DashboardPage dashboardObj;
+//	protected LoginPage loginObj;
 
 	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
 
@@ -46,7 +46,7 @@ public class BaseClass {
 	@AfterMethod
 	public void close() {
 		 if (driver != null) {
-		        driver.quit();
+		       driver.quit();
 		    }
 	}
 

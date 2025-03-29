@@ -30,21 +30,15 @@ public class LoginPage {
 	@CacheLookup
 	private WebElement signin;
 
-	public void setUsername(String userName) {
-		username.sendKeys(userName);
-	}
-
-	public void setLoginPassword(String passWord) {
-		password.sendKeys(passWord);
-	}
-
-	public DashboardPage clickSignin() {
-		signin.click();
-		return new DashboardPage(driver);
-	}
-
 	public String getActualTitle() {
 		return driver.getTitle();
+	}
+	
+	public DashboardPage login(String userName,String passWord) {
+		username.sendKeys(userName);
+		password.sendKeys(passWord);
+		signin.click();
+		return new DashboardPage(driver);
 	}
 
 	public LoginPage(WebDriver driver) {

@@ -10,19 +10,14 @@ import com.kodacars.qa.uilities.ConfigFileReader;
 import com.kodacars.qa.uilities.LoggerLoad;
 
 public class LoginTest extends BaseClass {
-	String username;
-	String password;
-	ConfigFileReader configFileReader = ConfigFileReader.getInstance();
+	
+	//ConfigFileReader configFileReader = ConfigFileReader.getInstance();
 
 	@Test()
 	public void ValidLoginCredentials() {
 
 		LoginPage loginPage = new LoginPage(driver);
-		username = ConfigFileReader.getUsername();
-		password = ConfigFileReader.getPassword();
-		loginPage.setUsername(username);
-		loginPage.setLoginPassword(password);
-		DashboardPage dashboardpage = loginPage.clickSignin();
+		DashboardPage dashboardpage = loginPage.login(ConfigFileReader.getUsername(), ConfigFileReader.getPassword());
 		Assert.assertTrue(dashboardpage.isAddReservationBtnDisplayed(), "AddReservation Button Is not dispplaed");
 		LoggerLoad.info("The user is on the " + driver.getTitle() + " home page and successfully logged in.");
 	}

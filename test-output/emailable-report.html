@@ -8,47 +8,47 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">404,429</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">34,849</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest</td><td><a href="#m0">DashboardThirdPartyReservationLink</a></td><td rowspan="1">1742940747863</td><td rowspan="1">88219</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.kodacars.qa.testscripts.AddReservationKodaTest</td><td><a href="#m1">AddReservationForKoda</a></td><td rowspan="2">1742940542871</td><td rowspan="2">50960</td></tr><tr class="passedeven"><td><a href="#m2">AddReservationForKoda</a></td></tr><tr class="passedodd"><td rowspan="2">com.kodacars.qa.testscripts.AddReservationThirdParyTest</td><td><a href="#m3">AddReservationConfirmationNumberSearch</a></td><td rowspan="1">1742940730936</td><td rowspan="1">12162</td></tr><tr class="passedodd"><td><a href="#m4">AddReservationForThirdPartyCreateManually</a></td><td rowspan="1">1742940655993</td><td rowspan="1">69036</td></tr><tr class="passedeven"><td rowspan="2">com.kodacars.qa.testscripts.AddReservationWalkInTest</td><td><a href="#m5">AddReservationForWalkIn</a></td><td rowspan="2">1742940437149</td><td rowspan="2">49720</td></tr><tr class="passedeven"><td><a href="#m6">AddReservationForWalkIn</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.kodacars.qa.testscripts.AddReservationKodaWalkinTest</td><td><a href="#m0">DashboardThirdPartyReservationLink</a></td><td rowspan="1">1743280893171</td><td rowspan="1">28839</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest#DashboardThirdPartyReservationLink</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">DashboardThirdPartyReservationLink Test is starting.<br/>onTestFailureDashboardThirdPartyReservationLink</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //button[contains(text(),&apos;Receive Payment&apos;)] (tried for 50 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.kodacars.qa.pageobjects.AddReservationPage.clickReceivePayment(AddReservationPage.java:468)
-	at com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest.DashboardThirdPartyReservationLink(ThirdPartyReservationLinkTest.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Receive Payment&apos;)]&quot;}
-  (Session info: chrome=134.0.6998.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<h2>Default test</h2><h3 id="m0">com.kodacars.qa.testscripts.AddReservationKodaWalkinTest#DashboardThirdPartyReservationLink</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{License Plate=Il75401, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP25617, Select Source=CheapAirportParking}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">DashboardThirdPartyReservationLink Test is starting.<br/>onTestFailureDashboardThirdPartyReservationLink</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@formcontrolname=&apos;confirmationNo&apos;] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8e64c75ab587da8cd98418c1638eaf67, findElement {value=//button[contains(text(),&apos;Receive Payment&apos;)], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55588}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55588/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8e64c75ab587da8cd98418c1638eaf67
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 28 more
-... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.kodacars.qa.testscripts.AddReservationKodaTest#AddReservationForKoda</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{License Plate=NC45765, State=North Carolina, Car Color=Black, Model=Avalon, Reservation Prepaid=Non Prepaid, Make=Toyota, Select Source=Koda}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForKoda Test is starting.<br/>AddReservationForKoda Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.kodacars.qa.testscripts.AddReservationKodaTest#AddReservationForKoda</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{License Plate=NJ75486, State=New Jersey, Car Color=Gray, Model=Echo, Reservation Prepaid=Non Prepaid, Make=Toyota, Select Source=Koda}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForKoda Test is starting.<br/>AddReservationForKoda Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.kodacars.qa.testscripts.AddReservationThirdParyTest#AddReservationConfirmationNumberSearch</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP25612, Select Source=CheapAirportParking}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationConfirmationNumberSearch Test is starting.<br/>AddReservationConfirmationNumberSearch Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.kodacars.qa.testscripts.AddReservationThirdParyTest#AddReservationForThirdPartyCreateManually</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{License Plate=Il75400, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP25612, Select Source=CheapAirportParking}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForThirdPartyCreateManually Test is starting.<br/>AddReservationForThirdPartyCreateManually Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.kodacars.qa.testscripts.AddReservationWalkInTest#AddReservationForWalkIn</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Model=Avalon, License Plate=Il75486, Make=Toyota, Select Source=Walk-in, State=Illinois, Car Color=Black}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForWalkIn Test is starting.<br/>AddReservationForWalkIn Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.kodacars.qa.testscripts.AddReservationWalkInTest#AddReservationForWalkIn</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Model=Camry, License Plate=AR75487, Make=Toyota, Select Source=Walk-in, State=Arizona, Car Color=White}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">AddReservationForWalkIn Test is starting.<br/>AddReservationForWalkIn Test is succeed.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51074}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51074/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7fd2ae74ebd83190ce0667b4c31fd68
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.kodacars.qa.pageobjects.AddReservationPage.getTextConfirmationNumber(AddReservationPage.java:276)
+	at com.kodacars.qa.testscripts.AddReservationKodaWalkinTest.DashboardThirdPartyReservationLink(AddReservationKodaWalkinTest.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

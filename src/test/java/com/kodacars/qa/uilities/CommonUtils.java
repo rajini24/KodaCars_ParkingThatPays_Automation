@@ -15,9 +15,7 @@ public class CommonUtils {
 	private WebDriverWait wait;
 	private static CommonUtils utilsObj = null;
 
-//	private CommonUtils() {
-//
-//	}
+
 	private CommonUtils(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 

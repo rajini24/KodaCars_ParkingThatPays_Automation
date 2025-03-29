@@ -1974,3 +1974,360 @@
 [INFO ]2025-03-2517:18:14.921[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
 [INFO ]2025-03-2517:18:18.924[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
 [INFO ]2025-03-2517:18:19.270[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2711:13:52.211[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2711:13:53.183[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2711:13:53.231[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2711:14:56.228[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2711:15:01.386[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2711:15:01.817[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2711:15:56.131[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2711:16:00.950[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2711:16:01.380[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2711:16:49.092[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2711:16:53.801[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2711:16:54.149[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2711:17:39.798[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2711:17:44.483[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2711:17:44.922[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2711:18:29.987[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2711:18:31.856[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2714:10:15.766[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2714:10:16.744[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2714:10:16.788[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2714:11:08.761[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2714:11:09.585[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2714:11:09.624[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2714:16:27.031[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2714:16:32.387[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2714:16:32.853[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2714:17:25.590[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2714:17:29.745[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2714:17:30.187[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2714:18:19.403[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2714:18:23.203[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2714:18:23.620[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2714:19:09.270[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2714:19:13.169[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2714:19:13.586[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2714:19:59.267[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2714:20:00.111[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2714:31:28.859[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2714:31:33.698[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2714:31:34.041[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2714:32:26.144[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2714:32:30.466[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2714:32:30.888[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2717:31:35.773[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2717:31:37.768[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2717:31:37.869[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2717:33:12.745[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2717:33:21.247[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2717:33:21.257[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2717:34:14.278[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2717:34:22.409[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2717:34:22.413[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2717:35:11.837[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2717:35:19.752[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2717:35:19.781[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2717:36:07.015[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2717:36:13.987[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2717:36:13.991[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2717:37:00.959[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2717:37:02.921[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2720:28:40.822[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2720:28:45.771[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2720:28:45.776[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2720:29:31.427[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2720:29:34.720[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2720:29:34.724[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2720:30:08.173[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2720:30:12.450[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2720:30:12.455[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2720:31:03.917[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2720:31:07.478[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2720:31:07.484[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2809:03:30.478[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2809:03:35.520[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2809:03:35.524[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2809:07:12.785[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2809:07:16.703[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2809:07:16.707[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2809:08:25.066[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2809:08:29.148[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2809:08:29.152[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2809:09:30.048[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2809:09:33.943[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2809:09:33.948[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2811:42:22.604[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2811:42:28.463[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2811:42:28.466[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2811:43:23.747[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2811:43:28.710[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2811:43:28.947[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2811:46:49.437[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2811:46:54.623[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2811:46:54.633[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2811:47:17.546[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2811:47:17.951[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2812:18:15.228[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2812:18:20.676[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2812:18:20.682[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2812:18:46.835[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2812:18:47.164[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2812:19:05.403[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2812:19:10.610[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2812:19:10.615[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2812:19:38.087[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2812:19:38.400[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2812:22:58.740[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2812:23:04.098[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2812:23:04.103[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2812:24:04.218[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2812:24:04.610[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2813:36:15.880[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2813:36:21.709[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2813:36:21.713[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2813:37:18.157[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2813:37:18.490[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2813:51:18.696[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2813:51:29.524[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2813:51:29.533[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2813:52:45.603[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is succeed.
+[INFO ]2025-03-2813:52:45.748[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:11:19.349[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:11:21.078[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is failed.
+[INFO ]2025-03-2814:11:21.228[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:16:39.031[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:16:40.708[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is failed.
+[INFO ]2025-03-2814:16:40.803[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:20:47.108[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:20:47.490[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2814:20:47.580[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:21:12.809[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:21:13.170[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2814:21:13.302[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:26:01.296[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:26:11.744[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2814:26:11.758[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2814:27:48.958[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:27:50.624[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is failed.
+[INFO ]2025-03-2814:27:50.742[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:34:13.381[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:34:24.325[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2814:34:24.349[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2814:34:37.750[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is succeed.
+[INFO ]2025-03-2814:34:37.885[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:37:34.774[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:37:44.840[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2814:37:44.848[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2814:38:00.113[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is succeed.
+[INFO ]2025-03-2814:38:00.301[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:48:32.168[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:48:43.181[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2814:48:43.192[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2814:49:01.362[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is succeed.
+[INFO ]2025-03-2814:49:01.399[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2814:49:15.166[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2814:49:21.075[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2814:49:21.411[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2814:49:36.542[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is succeed.
+[INFO ]2025-03-2814:49:36.630[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2815:10:17.422[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2815:10:21.958[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:10:21.963[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2815:10:38.943[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2815:10:42.509[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:10:42.517[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:11:22.022[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:11:25.347[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:11:25.354[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:13:52.757[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2815:13:56.957[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:13:56.961[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2815:14:49.249[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is succeed.
+[INFO ]2025-03-2815:14:52.813[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:14:52.817[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:15:31.935[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:15:35.532[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:15:35.538[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:16:14.521[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:16:18.129[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:16:18.133[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:16:57.156[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:17:00.559[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:17:00.564[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:17:39.998[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:17:43.766[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:17:43.771[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2815:17:58.879[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is succeed.
+[INFO ]2025-03-2815:18:03.481[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:18:03.485[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2815:19:14.910[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2815:19:14.937[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2815:19:15.083[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2815:20:39.390[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2815:20:43.515[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:20:43.520[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2815:21:06.282[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2815:21:10.230[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:21:10.232[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2815:21:27.064[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2815:21:30.982[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:21:30.986[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:22:36.370[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2815:22:40.442[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:22:40.444[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:23:19.946[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:23:23.690[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:23:23.693[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:24:02.714[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:24:06.528[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:24:06.533[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:24:45.462[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:24:49.226[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:24:49.230[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2815:25:28.101[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2815:25:31.843[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:25:31.848[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2815:26:13.676[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is succeed.
+[INFO ]2025-03-2815:26:17.349[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:26:17.354[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2815:26:33.663[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is succeed.
+[INFO ]2025-03-2815:26:37.302[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2815:26:37.307[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2815:28:36.888[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2815:28:37.422[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2914:15:01.600[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2914:15:06.863[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:15:06.867[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:15:48.724[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:15:54.100[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:15:54.102[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:18:07.110[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2914:18:12.049[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:18:12.053[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:18:53.337[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:18:58.615[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:18:58.617[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:19:37.498[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:19:42.183[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:19:42.187[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:20:21.614[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:20:26.283[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:20:26.363[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:21:05.741[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:21:11.006[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:21:11.008[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2914:21:28.039[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2914:21:32.896[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:21:32.912[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2914:22:37.515[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is failed.
+[INFO ]2025-03-2914:22:42.898[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:22:42.900[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2914:23:45.215[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2914:23:47.333[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Test
+[INFO ]2025-03-2914:31:34.096[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2914:31:38.812[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:31:38.815[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:32:10.247[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:32:14.638[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:32:14.642[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:32:44.658[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:32:49.376[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:32:49.385[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:33:37.297[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2914:33:42.008[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:33:42.013[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:35:05.103[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2914:35:09.757[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:35:09.767[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:35:58.554[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is failed.
+[INFO ]2025-03-2914:36:03.351[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:36:03.360[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:36:38.207[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Test
+[INFO ]2025-03-2914:36:43.263[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:36:43.267[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:37:36.595[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2914:37:41.097[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:37:41.285[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:38:34.739[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2914:38:38.891[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:38:38.902[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:39:31.371[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2914:39:35.574[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:39:35.650[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-03-2914:40:26.348[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-03-2914:40:30.278[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:40:30.280[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2914:40:47.292[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-03-2914:40:51.430[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:40:51.439[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2914:41:55.758[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is failed.
+[INFO ]2025-03-2914:42:00.182[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:42:00.184[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2914:43:29.641[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2914:43:34.138[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:43:34.142[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-03-2914:44:29.247[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is succeed.
+[INFO ]2025-03-2914:44:29.953[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2914:44:43.639[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2914:44:48.577[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:44:48.580[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is starting.
+[INFO ]2025-03-2914:45:06.506[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationConfirmationNumberSearch Test is succeed.
+[INFO ]2025-03-2914:45:07.865[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2914:45:22.055[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2914:45:26.410[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2914:45:26.420[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:01:56.851[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:02:01.759[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:02:01.762[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:02:07.674[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is succeed.
+[INFO ]2025-03-2915:02:09.579[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:02:52.265[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:02:57.054[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:02:57.060[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:04:40.866[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:04:45.900[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:04:45.904[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:05:43.907[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:05:44.493[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:06:13.799[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:06:18.711[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:06:18.714[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:07:16.583[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:07:17.385[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:16:54.711[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:17:00.337[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:17:00.341[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:17:06.189[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:17:07.161[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:17:32.956[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:17:37.745[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:17:37.750[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:17:43.352[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:17:44.087[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:24:07.135[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:24:11.989[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:24:11.993[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:24:17.573[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:24:19.008[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:32:47.578[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:32:53.514[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:32:53.518[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:33:09.578[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:33:10.285[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:34:13.171[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:34:17.947[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:34:17.950[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:34:43.631[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:34:44.411[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:35:31.591[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:35:36.360[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:35:36.363[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:36:05.223[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:36:05.857[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-03-2915:41:28.560[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-03-2915:41:33.168[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-03-2915:41:33.172[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is starting.
+[INFO ]2025-03-2915:42:02.112[main]com.kodacars.qa.uilities.LoggerLoad1)-DashboardThirdPartyReservationLink Test is failed.
+[INFO ]2025-03-2915:42:03.001[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test

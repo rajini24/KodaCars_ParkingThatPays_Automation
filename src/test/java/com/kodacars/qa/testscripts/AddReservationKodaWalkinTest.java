@@ -1,0 +1,87 @@
+package com.kodacars.qa.testscripts;
+
+import java.util.Map;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.kodacars.qa.pageobjects.AddReservationPage;
+import com.kodacars.qa.pageobjects.DashboardPage;
+import com.kodacars.qa.pageobjects.LoginPage;
+import com.kodacars.qa.testbase.BaseClass;
+import com.kodacars.qa.uilities.ConfigFileReader;
+import com.kodacars.qa.uilities.LoggerLoad;
+
+public class AddReservationKodaWalkinTest extends BaseClass {
+	DashboardPage dashboardpage;
+
+	@BeforeMethod
+	public void login() {
+		LoginPage loginPage = new LoginPage(driver);
+		dashboardpage = loginPage.login(ConfigFileReader.getUsername(), ConfigFileReader.getPassword());
+		LoggerLoad.info("The user is on the " + driver.getTitle() + " home page and successfully logged in.");
+	}
+
+	// Walk-in Customer
+	@Test(priority = 0,dataProvider = "KodaWalkIn", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
+
+	public void AddReservationForWalkIn(Map<String, String> rowData) throws InterruptedException {
+
+		dashboardpage.clickAddReservation();
+		AddReservationPage reservationObj = dashboardpage.clickNoConfirmation();
+		Assert.assertTrue(reservationObj.KodaWalkAddReservation(rowData.get("Select Source"),
+																rowData.get("Reservation Prepaid"),
+																rowData.get("Car Color"),
+																rowData.get("Make"),
+																rowData.get("Model"),
+																rowData.get("License Plate"),
+																rowData.get("State")));
+
+	}
+
+	@Test(priority = 1, dataProvider = "ThirdpartyManuallyCreateConfirmationNumber", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
+
+	public void AddReservationForThirdPartyCreateManually(Map<String, String> rowData) throws InterruptedException {
+
+		dashboardpage.clickAddReservation();
+		AddReservationPage reservationObj = dashboardpage.clickYesConfirmation();
+		Assert.assertTrue(reservationObj.KodaWalkAddReservation(rowData.get("Select Source"),
+																rowData.get("confirmation Number"),
+																rowData.get("Prepaid Or Partial"),
+																rowData.get("Car Color"),
+																rowData.get("Make"),
+																rowData.get("Model"),
+																rowData.get("License Plate"),
+																rowData.get("State")));
+	}
+
+	
+	// Search the third party confirmation Number
+	@Test(priority = 2, dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class, dataProvider = "ThirdpartyManuallyCreateConfirmationNumber")
+	
+	public void AddReservationConfirmationNumberSearch(Map<String, String> rowData) throws InterruptedException {
+		
+		dashboardpage.clickAddReservation();
+		
+		AddReservationPage reservationObj = dashboardpage.clickYesConfirmation();
+		reservationObj.enterconfirmationNumber( rowData.get("confirmation Number"));
+		reservationObj.clicksearchBtn();
+		Assert.assertTrue(reservationObj.isReceivePaymentMethod());
+		
+		
+	}
+	// Search the third party confirmation Number
+	@Test(priority = 3, dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class, dataProvider = "ThirdpartyManuallyCreateConfirmationNumber")
+	
+	public void DashboardThirdPartyReservationLink(Map<String, String> rowData) throws InterruptedException {
+		
+		//dashboardpage.clickAddReservation();
+		AddReservationPage reservationObj = dashboardpage.clickReservationLink( rowData.get("confirmation Number"));
+	Thread.sleep(3000);
+		 Assert.assertEquals(reservationObj.getTextConfirmationNumber(rowData.get("confirmation Number")), 
+			        "Mismatch in confirmation number!");
+		
+	}
+
+}
