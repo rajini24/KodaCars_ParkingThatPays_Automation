@@ -72,16 +72,6 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 		
 	}
 	
-//	@Test(priority = 3, dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class, dataProvider = "ThirdpartyManuallyCreateConfirmationNumber")
-//	
-//	public void DashboardThirdPartyReservationLink(Map<String, String> rowData) throws InterruptedException {
-//		
-//		//dashboardpage.clickAddReservation();
-//		AddReservationPage reservationObj = dashboardpage.clickReservationLink( rowData.get("confirmation Number"));
-//	Thread.sleep(3000);
-//		 Assert.assertEquals(reservationObj.getTextConfirmationNumber(rowData.get("confirmation Number")), 
-//			        "Mismatch in confirmation number!");
-//		
-//	}
+
 
 }
