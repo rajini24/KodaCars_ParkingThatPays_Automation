@@ -17,7 +17,6 @@ public class LoginPage {
 	CommonUtils utilsObj = CommonUtils.getInstance(driver);
 	
 	
-
 	@FindBy(xpath = "//input[@formcontrolname='userName']")
 	@CacheLookup
 	private WebElement username;

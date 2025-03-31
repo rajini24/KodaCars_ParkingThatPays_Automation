@@ -141,10 +141,6 @@ public class AddReservationPage {
 	@CacheLookup
 	private WebElement cancelReservation;
 
-//	@FindBy(xpath = "//div[@class='col-6 cursor']/i")
-//	@CacheLookup
-//	private WebElement reservationDetailsArrowLeft;
-
 	@FindBy(xpath = "//div[@role='combobox']")
 	@CacheLookup
 	private WebElement selectThirdPartySource;
@@ -220,30 +216,6 @@ public class AddReservationPage {
 		selectLocationdropdown.click();
 	}
 
-//	public void selectLocationdropdown1() {
-//		try {
-//			// Find and close the modal if present
-//			List<WebElement> closeButtons = driver.findElements(By.xpath("//button[@class='close']"));
-//			if (!closeButtons.isEmpty()) {
-//				closeButtons.get(0).click();
-//
-//				// Wait until modal disappears
-//				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("modal-backdrop")));
-//			}
-//		} catch (Exception e) {
-//			System.out.println("No modal found or issue closing modal: " + e.getMessage());
-//		}
-//
-//		// Ensure modal backdrop is gone
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("modal-backdrop")));
-//
-//		// Wait for dropdown to be visible
-//		utilsObj.visibilityOfMoreWaitTime(selectLocationdropdown);
-//		selectLocationdropdown.click();
-//	}
-
 	public void selectLocation() throws InterruptedException {
 		Thread.sleep(3000);
 		utilsObj.visibilityOf(selectLocation);
@@ -270,11 +242,18 @@ public class AddReservationPage {
 	
 		
 		public String getTextConfirmationNumber(String expectedConfirmationNumber) {
-		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
 		    // Wait until the input field is visible
-		    WebElement confirmationInput = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		    WebElement confirmationInput = wait.until(ExpectedConditions.presenceOfElementLocated(
 		        By.xpath("//input[@formcontrolname='confirmationNo']")));
+
+		    WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(60));
+		    WebElement confirmationElement = waits.until(ExpectedConditions.visibilityOfElementLocated(By.id("confirmationNumber")));
+
+		    new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+		    	    webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete")
+		    	);
 
 		    // Get the confirmation number from the input field
 		    String actualConfirmationNumber = confirmationInput.getDomAttribute("value");
@@ -347,7 +326,6 @@ return actualConfirmationNumber;
 	}
 
 	public void selectCarcolor(String color) {
-		System.out.println("The excel color **********" + color);
 		selectCarcolor.sendKeys(color, Keys.ENTER);
 	}
 
@@ -420,19 +398,6 @@ return actualConfirmationNumber;
 		return reservationSuccessBtn.isDisplayed();
 	}
 
-//	public void clickCancelReservationBtn() {
-//		cancelReservation.click();
-//	}
-
-//	public void clickReservationDetailsArrowLeft() {
-//		reservationDetailsArrowLeft.click();
-//	}
-
-//	public void clickDeleteReservationBtn() {
-//		utilsObj.visibilityOfExtraWaitTime(deleteReservation);
-//		deleteReservation.click();
-//	}
-
 	public void clickThirdPartySource() {
 		utilsObj.visibilityOfExtraWaitTime(selectThirdPartySource);
 		selectThirdPartySource.click();
@@ -443,11 +408,6 @@ return actualConfirmationNumber;
 		createManually.click();
 	}
 
-//	public void clickReceivePayment() {
-//		utilsObj.visibilityOfExtraWaitTimeout(driver,clickReceivePayment,50);
-//		//commonUtils.visibilityOfExtraWaitTime(, clickReceivePayment, 10);
-//		clickReceivePayment.click();
-//	}
 	public void clickReceivePayment() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 

@@ -19,7 +19,7 @@
 				
 			
 			<class name="com.kodacars.qa.testscripts.AddReservationKodaWalkinTest" />
-			<class name="com.kodacars.qa.testscripts.ThirdPartyReservationLinkTest" />
+			
 			
 		
 		

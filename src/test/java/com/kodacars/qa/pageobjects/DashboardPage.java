@@ -34,17 +34,6 @@ public class DashboardPage {
 	@CacheLookup
 	private WebElement clickYesConfirmation;
 
-//	@FindBy(xpath = "//span[starts-with(@id, 'cell-') and text()='CHAP25617']")
-//	@CacheLookup
-//	private WebElement clickReservationLink;
-	
-	
-	
-//	public void clickAddReservation() {
-//		utilsObj.visibilityOfMoreWaitTime(addReservation);
-//		addReservation.click();
-//	}
-
 	public boolean isAddReservationBtnDisplayed() {
 		return addReservation.isDisplayed();
 	}
@@ -62,61 +51,33 @@ public class DashboardPage {
 		return new AddReservationPage(driver);
 	}
 
-//	public AddReservationPage clickReservationLink() {
-//		utilsObj.visibilityOfExtraWaitTime(clickReservationLink);
-//		clickReservationLink.click();
-//		return new AddReservationPage(driver);
-//	}
-	
-	public AddReservationPage clickReservationLink(String excelConfirmationNumber ) {
-	// Find all dynamically generated reservations
-    List<WebElement> reservations = driver.findElements(By.xpath("//span[starts-with(@id, 'cell-')]"));
-
-    // Loop through reservations and match with confirmation number
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    for (WebElement reservation : reservations) {
-        String uiConfirmationNumber = reservation.getText();
-        System.out.println("Checking: " + uiConfirmationNumber);
-
-        if (uiConfirmationNumber.equals(excelConfirmationNumber)) {
-            System.out.println("Match found! Clicking on: " + uiConfirmationNumber);
-            wait.until(ExpectedConditions.visibilityOf(reservation));
-            reservation.click();
-            break; // Stop after finding the first match
-        }
-    }
-    return new AddReservationPage(driver);
-	}
-	
 	public void clickAddReservation() {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-	    // Ensure modal or overlay disappears before clicking
-	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("modal-backdrop")));
+		// Ensure modal or overlay disappears before clicking
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("modal-backdrop")));
 
-	    // Scroll to the button (if needed)
-	    WebElement addReservationButton = driver.findElement(By.xpath("//button[text()=' Add Reservation ']"));
-	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addReservationButton);
+		// Scroll to the button (if needed)
+		WebElement addReservationButton = driver.findElement(By.xpath("//button[text()=' Add Reservation ']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addReservationButton);
 
-	    // Wait until clickable
-	    wait.until(ExpectedConditions.elementToBeClickable(addReservationButton));
+		// Wait until clickable
+		wait.until(ExpectedConditions.elementToBeClickable(addReservationButton));
 
-	    // Click using JavaScript if normal click fails
-	    try {
-	        addReservationButton.click();
-	    } catch (ElementClickInterceptedException e) {
-	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", addReservationButton);
-	    }
+		// Click using JavaScript if normal click fails
+		try {
+			addReservationButton.click();
+		} catch (ElementClickInterceptedException e) {
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", addReservationButton);
+		}
 	}
-
-
 
 	public DashboardPage(WebDriver driver) {
 
 		if (driver == null) {
 			throw new IllegalArgumentException("Driver instance cannot be null");
 		}
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initialize wait
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
