@@ -82,4 +82,12 @@ public class DashboardPage {
 		PageFactory.initElements(driver, this);
 	}
 
+	public AddReservationPage clickLinkByConfirmationNumber(String confirmationNumber) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebElement confirmCell = wait.until(ExpectedConditions.presenceOfElementLocated(
+				By.xpath("//span[contains(@class,'ag-cell-value') and text()='" + confirmationNumber + "']")));
+		confirmCell.click();
+		return new AddReservationPage(driver);
+	}
+
 }

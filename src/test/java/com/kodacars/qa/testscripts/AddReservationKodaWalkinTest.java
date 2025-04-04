@@ -23,7 +23,7 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 		LoggerLoad.info("The user is on the " + driver.getTitle() + " home page and successfully logged in.");
 	}
 
-	// Walk-in Customer
+	// Walk-in Customer and Koda
 	@Test(priority = 0,dataProvider = "KodaWalkIn", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
 
 	public void AddReservationForWalkIn(Map<String, String> rowData) throws InterruptedException {
@@ -58,7 +58,7 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 
 	
 	// Search the third party confirmation Number
-	@Test(priority = 2, dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class, dataProvider = "ThirdpartyManuallyCreateConfirmationNumber")
+	@Test(priority = 2, dataProvider = "ThirdpartyManuallyCreateConfirmationNumber", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
 	
 	public void AddReservationConfirmationNumberSearch(Map<String, String> rowData) throws InterruptedException {
 		
@@ -67,10 +67,22 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 		AddReservationPage reservationObj = dashboardpage.clickYesConfirmation();
 		reservationObj.enterconfirmationNumber( rowData.get("confirmation Number"));
 		reservationObj.clicksearchBtn();
-		Assert.assertTrue(reservationObj.isReceivePaymentMethod());
+		Assert.assertTrue(reservationObj.isReceivePaymentMethodDispalyed());
+	}
+	
+	// the third party confirmation Number Cash/Card Payment Method
+	@Test(priority = 3, dataProvider = "receivePayment", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
+	
+	public void receiveCashOrCardPayment(Map<String, String> rowData) throws InterruptedException {
 		
+		
+		AddReservationPage reservationObj =dashboardpage.clickLinkByConfirmationNumber(rowData.get("confirmation Number"));
+		Assert.assertTrue(reservationObj.ispaymentReceivedSuccessfullyBtnDisplayed(rowData.get("PaymentMode"),
+													        	 rowData.get("Card Reference No")));
 		
 	}
+	
+	
 	
 
 

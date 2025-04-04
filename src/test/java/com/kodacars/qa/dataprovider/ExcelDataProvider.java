@@ -7,6 +7,7 @@ public class ExcelDataProvider {
 	private static final String KODA_WALKIN_SHEET = "KodaWalkIn";
 	private static final String THIRDPARTY_MANUALLY_CREATED_CONFIRMATION_NUMBER_SHEET = "ThirdParty";
 	private static final String SEARCH_THIRDPARTY_CONFIRMATION_NUMEBR = "ThirdPartySearchConfirmationNum";
+	private static final String RECEIVE_PAYMENT = "ReceivePayment";
 
 	@DataProvider(name = "KodaWalkIn")
 	public static Object[][] kodaWalkInDataProvider() {
@@ -23,6 +24,11 @@ public class ExcelDataProvider {
 	@DataProvider(name = "SearchThirdpartyConfirmationNumber")
 	public static Object[][] SearchThirdpartyConfirmationNumberDataProvider() {
 		Object[][] data = CommonDataProvider.getAllRows(SEARCH_THIRDPARTY_CONFIRMATION_NUMEBR);
+		return data;
+	}
+	@DataProvider(name = "receivePayment")
+	public static Object[][] receivePaymentDataProvider() {
+		Object[][] data = CommonDataProvider.getAllRows(RECEIVE_PAYMENT);
 		return data;
 	}
 

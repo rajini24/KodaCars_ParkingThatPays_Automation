@@ -2,6 +2,7 @@ package com.kodacars.qa.pageobjects;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -239,34 +240,31 @@ public class AddReservationPage {
 	public void enterconfirmationNumber(String confirmationNum) {
 		confirmationNumber.sendKeys(confirmationNum);
 	}
-	
-		
-		public String getTextConfirmationNumber(String expectedConfirmationNumber) {
-		    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-		    // Wait until the input field is visible
-		    WebElement confirmationInput = wait.until(ExpectedConditions.presenceOfElementLocated(
-		        By.xpath("//input[@formcontrolname='confirmationNo']")));
+	public String getTextConfirmationNumber(String expectedConfirmationNumber) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
-		    WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(60));
-		    WebElement confirmationElement = waits.until(ExpectedConditions.visibilityOfElementLocated(By.id("confirmationNumber")));
+		// Wait until the input field is visible
+		WebElement confirmationInput = wait.until(
+				ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@formcontrolname='confirmationNo']")));
 
-		    new WebDriverWait(driver, Duration.ofSeconds(30)).until(
-		    	    webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete")
-		    	);
+		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(60));
+		WebElement confirmationElement = waits
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("confirmationNumber")));
 
-		    // Get the confirmation number from the input field
-		    String actualConfirmationNumber = confirmationInput.getDomAttribute("value");
-		    		//getAttribute();
-return actualConfirmationNumber;
-		    // Assertion to compare expected vs actual confirmation number
-		   
-		}
+		new WebDriverWait(driver, Duration.ofSeconds(30)).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 
-	
+		// Get the confirmation number from the input field
+		String actualConfirmationNumber = confirmationInput.getDomAttribute("value");
+		// getAttribute();
+		return actualConfirmationNumber;
+		// Assertion to compare expected vs actual confirmation number
+
+	}
 
 	public void enterstartDate() {
-		enterstartDate.sendKeys("04/21/2025");
+		enterstartDate.sendKeys("04/05/2025");
 	}
 
 	public void enterstartTime() {
@@ -274,11 +272,11 @@ return actualConfirmationNumber;
 	}
 
 	public void enterEndDate() {
-		enterEndDate.sendKeys("04/22/2025");
+		enterEndDate.sendKeys("04/06/2025");
 	}
 
 	public void enterEndTime() {
-		enterEndTime.sendKeys("10:00 AM");
+		enterEndTime.sendKeys("06:30 PM");
 	}
 
 //	public void selectReservationPrepaidOrPartial2(String prepaid) {
@@ -291,7 +289,8 @@ return actualConfirmationNumber;
 
 	public void enterTotalAmount() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		WebElement totalAmountInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='totalAmount']")));
+		WebElement totalAmountInput = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='totalAmount']")));
 		totalAmountInput.sendKeys("20");
 	}
 
@@ -438,7 +437,7 @@ return actualConfirmationNumber;
 		}
 	}
 
-	public boolean isReceivePaymentMethod() {
+	public boolean isReceivePaymentMethodDispalyed() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 
 		// Ensure the page has fully loaded
@@ -460,14 +459,17 @@ return actualConfirmationNumber;
 	}
 
 	public void selectPaymentMode() {
-		utilsObj.visibilityOfExtraWaitTime(selectPaymentMode);
-		selectPaymentMode.click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("overlay")));
+
+		WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//span[contains(@class, 'p-dropdown-label') and text()='Select Payment Mode']")));
+		dropdown.click();
+
+//		utilsObj.visibilityOfExtraWaitTime(selectPaymentMode);
+//		selectPaymentMode.click();
 	}
 
-	public void selectCash() {
-		utilsObj.visibilityOf(selectCash);
-		selectCash.click();
-	}
 
 	public void clickcollectPayment() {
 		utilsObj.visibilityOfExtraWaitTime(collectPayment);
@@ -477,6 +479,25 @@ return actualConfirmationNumber;
 	public void clickpaymentReceivedSuccessfully() {
 		utilsObj.visibilityOfExtraWaitTime(paymentReceivedSuccessfully);
 		paymentReceivedSuccessfully.click();
+	}
+
+	public boolean ispaymentReceivedSuccessfullyBtnDisplayed(String paymentMethod, String card)
+			throws InterruptedException {
+		clickReceivePayment();
+		selectPaymentMode(paymentMethod);
+		if (paymentMethod.equalsIgnoreCase("Card")) {
+			enterCardReferenceNumber(card);
+		}
+		//else {
+//			paymentMethod.equalsIgnoreCase("Cash");
+//			System.out.println("Cash");
+//		}
+//		
+		clickcollectPayment();
+
+		boolean isOkBtnDispalyed = paymentReceivedSuccessfully.isDisplayed();
+		clickpaymentReceivedSuccessfully();
+		return isOkBtnDispalyed;
 	}
 
 	public boolean KodaWalkAddReservation(String sourceName, String prepaidPartial, String carColor, String carMake,
@@ -499,7 +520,7 @@ return actualConfirmationNumber;
 		if (sourceName.equalsIgnoreCase("koda")) {
 			selectReservationPrepaid(prepaidPartial);
 		}
-		//selectReservationPrepaid(prepaidPartial);
+		// selectReservationPrepaid(prepaidPartial);
 //		enterTotalAmount();
 //		enterPrepaidAmount();
 
@@ -558,6 +579,65 @@ return actualConfirmationNumber;
 		clickReservationSuccessBtn();
 		return isOkBtnDispalyed;
 
+	}
+
+	public void selectPaymentMode(String paymentMode) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		// Ensure the modal is visible
+		WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("receivePayment")));
+
+		// Ensure the overlay disappears before interaction
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("overlay")));
+
+		// Click the dropdown to open the payment mode options
+		WebElement dropdown = modal.findElement(By.className("p-dropdown-trigger"));
+		wait.until(ExpectedConditions.elementToBeClickable(dropdown));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", dropdown);
+		Thread.sleep(1000);
+		WebElement dropdownList = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.className("p-dropdown-items")));
+		List<WebElement> paymentOptions = dropdownList
+				.findElements(By.xpath("//li[@role='option' and contains(@class, 'p-dropdown-item')]"));
+
+		boolean found = false;
+		for (WebElement option : paymentOptions) {
+			if (option.getText().trim().equalsIgnoreCase(paymentMode)) {
+				wait.until(ExpectedConditions.elementToBeClickable(option));
+				option.click();
+				found = true;
+				break;
+			}
+		}
+
+		if (!found) {
+			throw new NoSuchElementException("Payment mode '" + paymentMode + "' not found in the dropdown.");
+		}
+	}
+
+	public void enterCardReferenceNumber(String cardRefNumber) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		// Locate the input field
+		WebElement cardRefInput = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@formcontrolname='CRN']")));
+
+		// Clear any existing value
+		cardRefInput.clear();
+
+		// Enter the Card Reference Number
+		cardRefInput.sendKeys(cardRefNumber);
+	}
+
+	public void clickOkButton() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		// Locate the OK button
+		WebElement okButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'swal2-confirm')]")));
+
+		// Click the button
+		okButton.click();
 	}
 
 	public AddReservationPage(WebDriver driver) {
