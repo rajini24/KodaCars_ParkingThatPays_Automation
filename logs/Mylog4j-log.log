@@ -2796,3 +2796,142 @@
 [INFO ]2025-04-0410:28:24.802[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
 [INFO ]2025-04-0410:28:44.107[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is succeed.
 [INFO ]2025-04-0410:28:44.170[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0411:52:43.243[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0411:52:43.891[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0411:52:43.924[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0411:54:21.790[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0411:54:26.177[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0411:54:26.181[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0411:55:23.048[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0411:55:23.082[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0411:55:23.153[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0411:56:11.080[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0411:56:14.722[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0411:56:14.726[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-04-0411:56:31.509[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is failed.
+[INFO ]2025-04-0411:56:31.753[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:21:08.891[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:21:13.387[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:21:13.391[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is starting.
+[INFO ]2025-04-0412:22:07.788[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForThirdPartyCreateManually Test is succeed.
+[INFO ]2025-04-0412:22:07.896[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:22:31.978[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:22:37.026[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:22:37.030[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:23:45.729[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:23:45.780[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:23:45.820[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:24:00.160[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:24:04.550[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:24:04.554[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-04-0412:24:58.379[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-04-0412:25:02.099[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:25:02.105[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-04-0412:25:45.069[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-04-0412:25:49.352[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:25:49.369[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-04-0412:26:41.448[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-04-0412:26:45.153[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:26:45.205[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is starting.
+[INFO ]2025-04-0412:27:38.040[main]com.kodacars.qa.uilities.LoggerLoad1)-AddReservationForWalkIn Test is succeed.
+[INFO ]2025-04-0412:27:38.334[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:29:47.208[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:29:53.185[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:29:53.189[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:30:23.334[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:30:23.622[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:33:36.241[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:33:40.939[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:33:40.942[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:34:12.308[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:34:12.601[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:39:02.578[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:39:07.183[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:39:07.197[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:39:47.927[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:39:48.337[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:40:31.426[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:40:35.996[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:40:36.004[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:41:14.426[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:41:14.731[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:44:23.194[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:44:28.333[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:44:28.336[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:44:48.864[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:44:49.180[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:50:29.176[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:50:33.685[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:50:33.690[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:51:14.238[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:51:14.573[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:52:06.599[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:52:11.279[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:52:11.282[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:53:05.295[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:53:05.659[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:54:22.484[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:54:27.903[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:54:27.907[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:55:12.402[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:55:12.802[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0412:56:38.956[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0412:56:44.685[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0412:56:44.689[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0412:57:29.705[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0412:57:30.100[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0413:01:37.187[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0413:01:43.142[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0413:01:43.146[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0413:02:59.281[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0413:02:59.848[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0413:06:32.383[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0413:06:37.137[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0413:06:37.140[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0413:07:31.723[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0413:07:32.085[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0413:10:20.275[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0413:10:24.841[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0413:10:24.846[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0413:11:11.924[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0413:11:12.318[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:18:59.252[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:19:07.797[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:19:07.807[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:19:46.537[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:19:46.889[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:20:19.354[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:20:27.261[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:20:27.269[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:21:05.118[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:21:05.541[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:21:30.108[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:21:38.158[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:21:38.165[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:22:21.966[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:22:22.298[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:22:55.310[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:23:03.016[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:23:03.023[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:23:47.845[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:23:48.206[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:24:46.330[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:24:53.570[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:24:53.579[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:25:31.030[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:25:31.568[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:32:44.072[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:32:47.994[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:32:47.998[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:33:13.713[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:33:13.978[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:34:47.134[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:34:50.799[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:34:50.802[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:35:15.688[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:35:15.963[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test
+[INFO ]2025-04-0517:37:34.624[main]com.kodacars.qa.uilities.LoggerLoad1)- onStart method Default test
+[INFO ]2025-04-0517:37:38.341[main]com.kodacars.qa.uilities.LoggerLoad1)-The user is on the KodaCars Web Portal home page and successfully logged in.
+[INFO ]2025-04-0517:37:38.344[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is starting.
+[INFO ]2025-04-0517:38:23.744[main]com.kodacars.qa.uilities.LoggerLoad1)-receiveCashOrCardPayment Test is failed.
+[INFO ]2025-04-0517:38:24.093[main]com.kodacars.qa.uilities.LoggerLoad1)-onFinish method Default test

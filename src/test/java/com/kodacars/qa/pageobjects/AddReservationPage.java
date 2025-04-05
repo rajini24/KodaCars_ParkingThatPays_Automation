@@ -9,6 +9,7 @@ import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -415,17 +416,11 @@ public class AddReservationPage {
 				.equals("complete"));
 
 		try {
-			// Ensure the element is present
 			WebElement receivePaymentButton = wait.until(ExpectedConditions
 					.presenceOfElementLocated(By.xpath("//button[contains(text(),'Receive Payment')]")));
 
-			// Scroll into view
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", receivePaymentButton);
-
-			// Wait for the button to be clickable
 			wait.until(ExpectedConditions.elementToBeClickable(receivePaymentButton));
-
-			// Click the button, use JS click if necessary
 			try {
 				receivePaymentButton.click();
 			} catch (ElementClickInterceptedException e) {
@@ -465,11 +460,7 @@ public class AddReservationPage {
 		WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//span[contains(@class, 'p-dropdown-label') and text()='Select Payment Mode']")));
 		dropdown.click();
-
-//		utilsObj.visibilityOfExtraWaitTime(selectPaymentMode);
-//		selectPaymentMode.click();
 	}
-
 
 	public void clickcollectPayment() {
 		utilsObj.visibilityOfExtraWaitTime(collectPayment);
@@ -487,8 +478,14 @@ public class AddReservationPage {
 		selectPaymentMode(paymentMethod);
 		if (paymentMethod.equalsIgnoreCase("Card")) {
 			enterCardReferenceNumber(card);
+//			Thread.sleep(5000);
+			clickPayNowButton();
+			Thread.sleep(7000);
+
+			enterEmail1();
+			clickCardButton();
 		}
-		//else {
+		// else {
 //			paymentMethod.equalsIgnoreCase("Cash");
 //			System.out.println("Cash");
 //		}
@@ -617,27 +614,116 @@ public class AddReservationPage {
 
 	public void enterCardReferenceNumber(String cardRefNumber) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		// Locate the input field
 		WebElement cardRefInput = wait
 				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@formcontrolname='CRN']")));
-
-		// Clear any existing value
 		cardRefInput.clear();
-
-		// Enter the Card Reference Number
 		cardRefInput.sendKeys(cardRefNumber);
+	}
+
+//	public void clickPayNowButton() {
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+////		WebElement modalFooter = wait.until(
+////				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.modal-footer.ng-star-inserted")));
+//		 List<WebElement> payNowButtons = driver.findElements(
+//			        By.xpath("//button[contains(text(), 'Pay Now')]"));
+//		WebElement payNowButton = wait
+//				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Pay Now')]")));
+//		payNowButton.click();
+//	}
+	public void clickPayNowButton() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		// Wait until *any* Pay Now button is present
+		wait.until(
+				ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//button[contains(text(), 'Pay Now')]")));
+
+		List<WebElement> payNowButtons = driver.findElements(By.xpath("//button[contains(text(), 'Pay Now')]"));
+
+		for (WebElement button : payNowButtons) {
+			try {
+				if (button.isDisplayed() && button.isEnabled()) {
+					// Try standard click
+					try {
+						button.click();
+					} catch (Exception e) {
+						// Fallback to JS click if normal click fails
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+					}
+					System.out.println("Clicked Pay Now button.");
+					return;
+				}
+			} catch (StaleElementReferenceException e) {
+				// Retry with next button if stale
+				continue;
+			}
+		}
+
+		throw new RuntimeException("No visible and enabled 'Pay Now' button found.");
+	}
+
+	public void clickCardButton() {
+
+		// First switch to parent iframe
+		driver.switchTo().frame("parentIframeId"); // or use WebElement or other locators
+		// Then switch to the target iframe
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='Secure card payment input frame']")));
+
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//		WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("iframe[title='Secure card payment input frame']")));
+//		driver.switchTo().frame(iframe);
+
+		// Now wait for the button
+		WebElement cardButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[aria-label='Pay with card']")));
+		cardButton.click();
+
+	}
+
+	public void clickCardButton1() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+		// Optional: Wait for loader to disappear
+		try {
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".loading-overlay")));
+		} catch (TimeoutException e) {
+			System.out.println("Loader not found or already gone.");
+		}
+
+		// Optional debug
+		List<WebElement> btns = driver.findElements(By.cssSelector("button[aria-label='Pay with card']"));
+		System.out.println("Card button count: " + btns.size());
+
+		WebElement cardButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[aria-label='Pay with card']")));
+
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", cardButton);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", cardButton);
 	}
 
 	public void clickOkButton() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		// Locate the OK button
 		WebElement okButton = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'swal2-confirm')]")));
-
-		// Click the button
 		okButton.click();
+	}
+
+	public void enterEmail1() {
+
+		// Check if iframe exists
+		List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+		System.out.println("Iframe count: " + iframes.size());
+
+		if (iframes.size() > 0) {
+			driver.switchTo().frame(0); // or switch using name/id if known
+		}
+
+		// Proceed to interact with email field
+//		WebElement email = driver.findElement(By.id("email"));
+//		email.sendKeys("test@example.com");
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement enterEmail = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']")));
+		enterEmail.sendKeys("abc123@gmail.com");
 	}
 
 	public AddReservationPage(WebDriver driver) {
