@@ -3,16 +3,17 @@ package com.kodacars.qa.pageobjects;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -495,6 +496,114 @@ public class AddReservationPage {
 		boolean isOkBtnDispalyed = paymentReceivedSuccessfully.isDisplayed();
 		clickpaymentReceivedSuccessfully();
 		return isOkBtnDispalyed;
+	}
+
+	@FindBy(xpath = "//div[@class='text-center mt-4']//button[text()='Receive Payment']")
+	WebElement receivePaymentButton;
+
+	@FindBy(xpath = "//span[text()='Select Payment Mode']")
+	WebElement selectPaymentModeDDB;
+
+	@FindBy(xpath = "//p-dropdownitem[contains(@class,'p-element ng-tns-c53-18 ng-star-inserted')]//span[@class='ng-star-inserted' and text()='Card']")
+	WebElement cardOption;
+
+	@FindBy(xpath = "(//button[text()='Pay Now'])[2]")
+	WebElement payNowBtn;
+	
+	@FindBy(xpath = "//button[@data-testid='card-accordion-item-button']")
+	WebElement cardButton;
+	
+	@FindBy(name="cardNumber")
+	WebElement cardInforationTextbox ;
+	
+	
+	@FindBy(name="cardExpiry")
+	WebElement cardExpiryTextbox ;
+	
+	@FindBy(name="cardCvc")
+	WebElement cvcTextbox ;
+	
+	@FindBy(name="billingName")
+	WebElement billingNameTextbox ;
+	
+	@FindBy(name="billingPostalCode")
+	WebElement zipTextbox ;
+	
+	@FindBy(id="enableStripePass")
+	WebElement phoneNoCheckbox ;
+	
+	@FindBy(xpath="//div[@class='SubmitButton-IconContainer']")
+	WebElement payButton ;
+	
+	@FindBy(xpath="//h1[text()='Payment Successful']")
+	WebElement successMessageLable ;
+	
+	
+	
+
+
+
+
+	public void clickReceivePaymentOne() {
+
+		WebElement receiveButton = wait.until(ExpectedConditions.elementToBeClickable(receivePaymentButton));
+		receiveButton.click();
+	}
+
+	public void selectPaymentCard() {
+		selectPaymentMode.click();
+		cardOption.click();
+	}
+
+	public boolean paymentModebyCard(String cardInformation,String cardExpiry ,String cvcNo, String cardName, String zip, String email ) {
+		
+		boolean displayed =false;
+		clickReceivePayment();
+		selectPaymentCard();
+		String cardWindow = driver.getWindowHandle();
+		payNowBtn.click();
+
+		new WebDriverWait(driver, Duration.ofSeconds(10)).until(driver1 -> driver1.getWindowHandles().size() > 1);
+
+		Set<String> windowHandles = driver.getWindowHandles();
+		for (String windowHandle : windowHandles) {
+
+			if (!windowHandle.equalsIgnoreCase(cardWindow)) {
+				driver.switchTo().window(windowHandle);
+				WebElement emailTxt = wait.until(
+						ExpectedConditions.visibilityOfElementLocated(By.cssSelector("main form input[id='email']")));
+
+				int width = cardButton.getSize().getWidth();
+				int height = cardButton.getSize().getHeight();
+				int xOffset = (int) (width * 0.75); 
+				int yOffset = height / 2; 
+
+				Actions actions = new Actions(driver);
+				actions.moveToElement(cardButton, xOffset, yOffset).click().perform();
+				actions.moveToElement(cardInforationTextbox).click().sendKeys(cardInformation).build().perform();
+				actions.moveToElement(cardExpiryTextbox).click().sendKeys(cardExpiry).build().perform();
+				actions.moveToElement(cvcTextbox).click().sendKeys(cvcNo).build().perform();
+				actions.moveToElement(billingNameTextbox).click().sendKeys(cardName).build().perform();
+				actions.moveToElement(zipTextbox).click().sendKeys(zip).build().perform();				
+				actions.click(phoneNoCheckbox).perform();
+				actions.moveToElement(emailTxt).click().sendKeys(email).build().perform();
+
+				JavascriptExecutor js = (JavascriptExecutor) driver;				
+				js.executeScript("arguments[0].click();", payButton);
+
+				//By successMessageLable = By.xpath("//h1[text()='Payment Successful']");
+				WebElement successMessageLableWebElement = wait.until(ExpectedConditions.visibilityOf(successMessageLable));
+						
+
+				displayed = successMessageLableWebElement.isDisplayed();
+				driver.close();
+				break;
+
+			}
+
+		}
+		return displayed;
+
 	}
 
 	public boolean KodaWalkAddReservation(String sourceName, String prepaidPartial, String carColor, String carMake,

@@ -1,9 +1,11 @@
 package com.kodacars.qa.testbase;
 
 import java.time.Duration;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -29,7 +31,16 @@ public class BaseClass {
 	@Parameters("browser")
 	public void setup(@Optional("Chrome") String browser) {
 		if (browser.equals("Chrome")) {
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+		
+				options.addArguments("--disable-blink-features=Autofill");
+				options.setExperimentalOption("prefs", Map.of(
+				    "credentials_enable_service", false,
+				    "profile.password_manager_enabled", false,
+				    "autofill.credit_card_enabled", false,
+				    "autofill.profile_enabled", false
+				));
+			driver = new ChromeDriver(options);
 		} else if (browser.equals("Edge")) {
 			driver = new EdgeDriver();
 
