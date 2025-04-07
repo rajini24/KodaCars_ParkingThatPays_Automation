@@ -5,18 +5,18 @@
       <![CDATA[onStart method Default test]]>
     </line>
     <line>
-      <![CDATA[receiveCashOrCardPayment Test is starting.]]>
+      <![CDATA[AddReservationConfirmationNumberSearch Test is starting.]]>
     </line>
     <line>
-      <![CDATA[onTestFailurereceiveCashOrCardPayment]]>
+      <![CDATA[onTestFailureAddReservationConfirmationNumberSearch]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-04-05T17:37:34 CDT" name="Default suite" finished-at="2025-04-05T17:38:24 CDT" duration-ms="49799">
+  <suite started-at="2025-04-07T17:35:56 CDT" name="Default suite" finished-at="2025-04-07T17:37:05 CDT" duration-ms="68896">
     <groups>
     </groups>
-    <test started-at="2025-04-05T17:37:34 CDT" name="Default test" finished-at="2025-04-05T17:38:24 CDT" duration-ms="49799">
+    <test started-at="2025-04-07T17:35:56 CDT" name="Default test" finished-at="2025-04-07T17:37:05 CDT" duration-ms="68896">
       <class name="com.kodacars.qa.testscripts.AddReservationKodaWalkinTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@43b9fd5]" started-at="2025-04-05T17:37:35 CDT" name="setup" finished-at="2025-04-05T17:37:38 CDT" duration-ms="2832" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@79dc5318]" started-at="2025-04-07T17:35:57 CDT" name="setup" finished-at="2025-04-07T17:35:59 CDT" duration-ms="2872" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,39 +27,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@43b9fd5]" started-at="2025-04-05T17:37:38 CDT" name="login" finished-at="2025-04-05T17:37:38 CDT" duration-ms="272" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@79dc5318]" started-at="2025-04-07T17:36:00 CDT" name="login" finished-at="2025-04-07T17:36:00 CDT" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="receiveCashOrCardPayment(java.util.Map)[pri:3, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@43b9fd5]" started-at="2025-04-05T17:37:38 CDT" name="receiveCashOrCardPayment" data-provider="receivePayment" finished-at="2025-04-05T17:38:23 CDT" duration-ms="45386" status="FAIL">
+        <test-method signature="AddReservationConfirmationNumberSearch(java.util.Map)[pri:2, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@79dc5318]" started-at="2025-04-07T17:36:00 CDT" name="AddReservationConfirmationNumberSearch" data-provider="ThirdpartyManuallyCreateConfirmationNumber" finished-at="2025-04-07T17:37:04 CDT" duration-ms="64176" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242}]]>
+                <![CDATA[{License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP456312, Select Source=CheapAirportParking}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='email'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59000/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5973d63eafedf2d3eed4d399ae78cc28]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "receivePaymentButton" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='email'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59000/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5973d63eafedf2d3eed4d399ae78cc28
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.kodacars.qa.pageobjects.AddReservationPage.enterEmail1(AddReservationPage.java:728)
-at com.kodacars.qa.pageobjects.AddReservationPage.ispaymentReceivedSuccessfullyBtnDisplayed(AddReservationPage.java:485)
-at com.kodacars.qa.testscripts.AddReservationKodaWalkinTest.receiveCashOrCardPayment(AddReservationKodaWalkinTest.java:80)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "receivePaymentButton" is null
+at com.kodacars.qa.pageobjects.AddReservationPage.isReceivePaymentMethodDispalyed(AddReservationPage.java:493)
+at com.kodacars.qa.testscripts.AddReservationKodaWalkinTest.AddReservationConfirmationNumberSearch(AddReservationKodaWalkinTest.java:70)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -88,17 +75,17 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
-              <![CDATA[receiveCashOrCardPayment Test is starting.]]>
+              <![CDATA[AddReservationConfirmationNumberSearch Test is starting.]]>
             </line>
             <line>
-              <![CDATA[onTestFailurereceiveCashOrCardPayment]]>
+              <![CDATA[onTestFailureAddReservationConfirmationNumberSearch]]>
             </line>
           </reporter-output>
-        </test-method> <!-- receiveCashOrCardPayment -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@43b9fd5]" started-at="2025-04-05T17:38:24 CDT" name="close" finished-at="2025-04-05T17:38:24 CDT" duration-ms="1" status="PASS">
+        </test-method> <!-- AddReservationConfirmationNumberSearch -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.kodacars.qa.testscripts.AddReservationKodaWalkinTest@79dc5318]" started-at="2025-04-07T17:37:04 CDT" name="close" finished-at="2025-04-07T17:37:05 CDT" duration-ms="312" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

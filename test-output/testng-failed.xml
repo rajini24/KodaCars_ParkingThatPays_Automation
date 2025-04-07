@@ -8,7 +8,7 @@
           <include name="setup"/>
           <include name="login"/>
           <include name="close"/>
-          <include name="receiveCashOrCardPayment" invocation-numbers="0"/>
+          <include name="AddReservationConfirmationNumberSearch" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.kodacars.qa.testscripts.AddReservationKodaWalkinTest -->
     </classes>

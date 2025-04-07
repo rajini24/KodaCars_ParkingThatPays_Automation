@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\nithi\AppData\Local\Temp\testng-eclipse-2147060216\testng-customsuite.xml</span>
+                    <span>C:\Users\nithi\AppData\Local\Temp\testng-eclipse-714671258\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.kodacars.qa.testscripts.AddReservationKodaWalkinTest" class="method navigator-link" hash-for-method="receiveCashOrCardPayment({confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242})">receiveCashOrCardPayment({confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.kodacars.qa.testscripts.AddReservationKodaWalkinTest" class="method navigator-link" hash-for-method="AddReservationConfirmationNumberSearch({License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)">AddReservationConfirmationNumberSearch({License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,21 +126,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="receiveCashOrCardPayment({confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242})">
-                  </a> <!-- receiveCashOrCardPayment({confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242}) -->
-                  <span class="method-name">receiveCashOrCardPayment</span>
-                  <span class="parameters">({confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242})</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;email&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\nithi\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59000}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59000/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5973d63eafedf2d3eed4d399ae78cc28
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.kodacars.qa.pageobjects.AddReservationPage.enterEmail1(AddReservationPage.java:728)
-	at com.kodacars.qa.pageobjects.AddReservationPage.ispaymentReceivedSuccessfullyBtnDisplayed(AddReservationPage.java:485)
-	at com.kodacars.qa.testscripts.AddReservationKodaWalkinTest.receiveCashOrCardPayment(AddReservationKodaWalkinTest.java:80)
+                  <a name="AddReservationConfirmationNumberSearch({License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)">
+                  </a> <!-- AddReservationConfirmationNumberSearch({License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...) -->
+                  <span class="method-name">AddReservationConfirmationNumberSearch</span>
+                  <span class="parameters">({License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=Avalon, Make=Toyota, confirmation Number=CHAP456312, Select Source=CheapAirportParking})</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.isDisplayed()&quot; because &quot;receivePaymentButton&quot; is null
+	at com.kodacars.qa.pageobjects.AddReservationPage.isReceivePaymentMethodDispalyed(AddReservationPage.java:493)
+	at com.kodacars.qa.testscripts.AddReservationKodaWalkinTest.AddReservationConfirmationNumberSearch(AddReservationKodaWalkinTest.java:70)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -176,7 +168,7 @@ Session ID: 5973d63eafedf2d3eed4d399ae78cc28
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nithi\AppData\Local\Temp\testng-eclipse-2147060216\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\nithi\AppData\Local\Temp\testng-eclipse-714671258\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -187,7 +179,7 @@ Session ID: 5973d63eafedf2d3eed4d399ae78cc28
     &lt;classes&gt;
       &lt;class name=&quot;com.kodacars.qa.testscripts.AddReservationKodaWalkinTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;receiveCashOrCardPayment&quot;/&gt;
+          &lt;include name=&quot;AddReservationConfirmationNumberSearch&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.kodacars.qa.testscripts.AddReservationKodaWalkinTest --&gt;
     &lt;/classes&gt;
@@ -231,14 +223,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'receiveCashOrCardPayment')
+data.setCell(0, 1, 'AddReservationConfirmationNumberSearch')
 data.setCell(0, 2, 'com.kodacars.qa.testscripts.AddReservationKodaWalkinTest')
-data.setCell(0, 3, 45386);
+data.setCell(0, 3, 64176);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -250,27 +242,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">receiveCashOrCardPayment({confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242})</span>
+              <span class="reporter-method-name">AddReservationConfirmationNumberSearch({License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">receiveCashOrCardPayment Test is starting.</span>
-                <span class="reporter-method-output">onTestFailurereceiveCashOrCardPayment</span>
+                <span class="reporter-method-output">AddReservationConfirmationNumberSearch Test is starting.</span>
+                <span class="reporter-method-output">onTestFailureAddReservationConfirmationNumberSearch</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.kodacars.qa.testscripts.AddReservationKodaWalkinTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">AddReservationConfirmationNumberSearch</span>
-                <br/>
                 <span class="ignored-method-name">AddReservationForThirdPartyCreateManually</span>
                 <br/>
-                <span class="ignored-method-name">AddReservationForWalkIn</span>
+                <span class="ignored-method-name">AddReservationForWalkInKoda</span>
+                <br/>
+                <span class="ignored-method-name">updateReservation</span>
+                <br/>
+                <span class="ignored-method-name">checkInKeyIn</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -289,17 +283,17 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">login</span>
-                <span class="method-start">2897 ms</span>
+                <span class="method-start">2937 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">receiveCashOrCardPayment({confirmation Number=BRHM1065424, PaymentMode=Card, Card Reference No=4242 4242 4242 4242})</span>
-                <span class="method-start">3171 ms</span>
+                <span class="method-name">AddReservationConfirmationNumberSearch({License Plate=Il75407, Prepaid Or Partial=Prepaid/Partial, State=Illinois, Car Color=Black, Model=A...)</span>
+                <span class="method-start">3214 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">48889 ms</span>
+                <span class="method-start">67716 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
