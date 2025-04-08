@@ -579,17 +579,12 @@ public class AddReservationPage {
 		
 
 	}
-	public AddReservationPage goToReceivePaymentCash(String cardInformation ) {
+	public AddReservationPage goToReceivePaymentCash() {
 		
 		clickReceivePayment();
-
 		selectPaymentCash();
 		clickCollectPaymentButton();
-		return new AddReservationPage(driver);
-
-
-		
-		
+		return new AddReservationPage(driver);		
 	}
 
 	public boolean KodaWalkAddReservation(String sourceName, String prepaidPartial, String carColor, String carMake,

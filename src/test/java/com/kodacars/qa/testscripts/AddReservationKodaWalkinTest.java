@@ -60,10 +60,13 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 		reservationObj.enterconfirmationNumber(rowData.get("confirmation Number"));
 		reservationObj.clicksearchBtn();
 		Assert.assertTrue(reservationObj.isReceivePaymentMethodDispalyed());
+	
+		
 	}
 
 
-	@Test(priority = 4, description = "Verify the application that user can pay the payment by cards", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class, dataProvider = "receivePayment")
+	@Test(priority = 4, description = "Verify the application that user can pay the payment by cards", 
+			dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class, dataProvider = "receivePaymentByCard")
 
 	public void payPaymentByCard(Map<String, String> rowData) {
 
@@ -75,11 +78,12 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 				.isoKPaymentReceviedButtonDisplayed());
 	}
 
-	@Test(priority=5, description="Verify the application that user can pay the payment by cash")
-	public void payPaymentByCash() {
+	@Test(priority=5, description="Verify the application that user can pay the payment by cash",
+			dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class, dataProvider = "receivePaymentByCash")
+	public void payPaymentByCash(Map<String, String> rowData) {
 
-		AddReservationPage reservationObj = dashboardpage.clickLinkByConfirmationNumber("BRHM1065527");
-		Assert.assertTrue(reservationObj.goToReceivePaymentCash("BRHM1065527").isoKPaymentReceviedButtonDisplayed());
+		AddReservationPage reservationObj = dashboardpage.clickLinkByConfirmationNumber(rowData.get("Confirmation Number"));
+		Assert.assertTrue(reservationObj.goToReceivePaymentCash().isoKPaymentReceviedButtonDisplayed());
 	}
 
 }
