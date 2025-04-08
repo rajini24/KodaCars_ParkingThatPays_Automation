@@ -9,6 +9,7 @@ public class ExcelDataProvider {
 	private static final String SEARCH_THIRDPARTY_CONFIRMATION_NUMEBR = "ThirdPartySearchConfirmationNum";
 	private static final String RECEIVE_PAYMENT = "ReceivePayment";
 	private static final String UPDATE_RESERVATION = "UpdateReservation";
+	private static final String CHECKIN_KEYIN = "CheckInKeyIn";
 
 	@DataProvider(name = "KodaWalkIn")
 	public static Object[][] kodaWalkInDataProvider() {
@@ -35,6 +36,11 @@ public class ExcelDataProvider {
 	@DataProvider(name = "updateReservation")
 	public static Object[][] updateReservationDataProvider() {
 		Object[][] data = CommonDataProvider.getAllRows(UPDATE_RESERVATION);
+		return data;
+	}
+	@DataProvider(name = "CheckIn/KeyIn")
+	public static Object[][] CheckInKeyInDataProvider() {
+		Object[][] data = CommonDataProvider.getAllRows(CHECKIN_KEYIN);
 		return data;
 	}
 

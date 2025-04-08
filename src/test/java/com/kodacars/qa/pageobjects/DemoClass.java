@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
@@ -276,4 +277,52 @@ public class DemoClass {
 //	String actualConfirmationNumber = confirmationInput.getDomAttribute("value");
 //	return actualConfirmationNumber;
 //}
+	
+//	public void selectLocationDropdownOption(String locationName) {
+//	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//
+//	    // Step 1: Gracefully handle modal-backdrop if present
+//	    try {
+//	        List<WebElement> overlays = driver.findElements(By.className("modal-backdrop"));
+//	        if (!overlays.isEmpty()) {
+//	            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("modal-backdrop")));
+//	            System.out.println("Modal overlay disappeared.");
+//	        }
+//	    } catch (TimeoutException e) {
+//	        System.out.println("Modal overlay did not disappear in time. Proceeding with caution.");
+//	    }
+//
+//	    // Step 2: Locate and click the dropdown input
+//	    By locationInputLocator = By.xpath("//ng-select[@formcontrolname='location' and @bindlabel='name']//input");
+//	    WebElement locationInput = wait.until(ExpectedConditions.elementToBeClickable(locationInputLocator));
+//
+//	    scrollIntoView(locationInput);
+//	    clickElement(locationInput);
+//
+//	    // Step 3: Select desired location option
+//	    By locationOptionLocator = By.xpath("//ng-select[@formcontrolname='location']//span[contains(text(),'" + locationName + "')]");
+//	    WebElement locationOption = wait.until(ExpectedConditions.visibilityOfElementLocated(locationOptionLocator));
+//
+//	    scrollIntoView(locationOption);
+//	    clickElement(locationOption);
+//
+//	    System.out.println("Selected location: " + locationName);
+//
+//	    
+//	}
+//	// === Helper methods inside main method ===
+//    public void scrollIntoView(WebElement element) {
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+//        System.out.println("Scrolled into view: " + element);
+//    }
+//
+//    public void clickElement(WebElement element) {
+//        try {
+//            element.click();
+//            System.out.println("Clicked element: " + element);
+//        } catch (ElementClickInterceptedException e) {
+//            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+//            System.out.println("Fallback JS click used for element: " + element);
+//        }
+//    }
 }
