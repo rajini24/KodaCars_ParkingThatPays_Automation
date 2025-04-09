@@ -74,7 +74,7 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 	
 	
 	// Update Reservation
-	@Test(priority = 4, dataProvider = "updateReservation", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
+	@Test(priority = 5, dataProvider = "updateReservation", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
 	
 	public void updateReservation(Map<String, String> rowData) throws InterruptedException {
 		
@@ -84,7 +84,7 @@ public class AddReservationKodaWalkinTest extends BaseClass {
 				
 	}
 	
-	@Test(priority = 5, dataProvider = "CheckIn/KeyIn", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
+	@Test(priority = 6, dataProvider = "CheckIn/KeyIn", dataProviderClass = com.kodacars.qa.dataprovider.ExcelDataProvider.class)
 	public void checkInKeyIn(Map<String, String> rowData) throws InterruptedException
 	{
 		AddReservationPage reservationObj =dashboardpage.clickLinkByConfirmationNumber(rowData.get("confirmation Number"));

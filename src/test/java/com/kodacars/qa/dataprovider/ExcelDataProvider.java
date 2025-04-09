@@ -7,7 +7,6 @@ public class ExcelDataProvider {
 	private static final String KODA_WALKIN_SHEET = "KodaWalkIn";
 	private static final String THIRDPARTY_MANUALLY_CREATED_CONFIRMATION_NUMBER_SHEET = "ThirdParty";
 	private static final String SEARCH_THIRDPARTY_CONFIRMATION_NUMEBR = "ThirdPartySearchConfirmationNum";
-	private static final String RECEIVE_PAYMENT = "ReceivePayment";
 	private static final String UPDATE_RESERVATION = "UpdateReservation";
 	private static final String CHECKIN_KEYIN = "CheckInKeyIn";
 
@@ -28,16 +27,13 @@ public class ExcelDataProvider {
 		Object[][] data = CommonDataProvider.getAllRows(SEARCH_THIRDPARTY_CONFIRMATION_NUMEBR);
 		return data;
 	}
-	@DataProvider(name = "receivePayment")
-	public static Object[][] receivePaymentDataProvider() {
-		Object[][] data = CommonDataProvider.getAllRows(RECEIVE_PAYMENT);
-		return data;
-	}
+	
 	@DataProvider(name = "updateReservation")
 	public static Object[][] updateReservationDataProvider() {
 		Object[][] data = CommonDataProvider.getAllRows(UPDATE_RESERVATION);
 		return data;
 	}
+	
 	@DataProvider(name = "CheckIn/KeyIn")
 	public static Object[][] CheckInKeyInDataProvider() {
 		Object[][] data = CommonDataProvider.getAllRows(CHECKIN_KEYIN);
