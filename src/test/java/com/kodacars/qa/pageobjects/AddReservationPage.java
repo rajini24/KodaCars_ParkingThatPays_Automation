@@ -170,6 +170,35 @@ public class AddReservationPage {
 	@CacheLookup
 	private WebElement createManually;
 
+	@FindBy(xpath = "//div[@class='text-center mt-4']//button[text()='Receive Payment']")
+	WebElement receivePaymentButton;
+
+	@FindBy(xpath = "//span[text()='Select Payment Mode']")
+	WebElement selectPaymentModeDDB;
+
+	@FindBy(xpath = "//p-dropdownitem[contains(@class,'p-element ng-tns-c53-18 ng-star-inserted')]//span[@class='ng-star-inserted' and text()='Card']")
+	WebElement cardOption;
+
+	@FindBy(xpath = "//p-dropdownitem[contains(@class,'p-element ng-tns-c53-18 ng-star-inserted')]//span[@class='ng-star-inserted' and text()='Cash']")
+	WebElement cashOption;
+
+	@FindBy(xpath = "(//button[text()='Pay Now'])[2]")
+	WebElement payNowBtn;
+
+	@FindBy(xpath = "//button[text()='OK']")
+	WebElement oKPaymentReceviedButton;
+
+	@FindBy(xpath = "//button[text()='Collect Payment']")
+	WebElement collectPaymentButton;
+
+	@FindBy(xpath = "//span[contains(@class, 'p-dropdown-label') and text()='Select Payment Mode']")
+	@CacheLookup
+	private WebElement selectPaymentMode;
+	
+	@FindBy(xpath = "//button[@id='closeModal' and text()='Collect Payment']")
+	@CacheLookup
+	private WebElement collectPayment;
+
 	public void enterFirstName() {
 		String firstName = faker.name().firstName();
 		System.out.println("The First Name : " + firstName);
@@ -599,6 +628,76 @@ public class AddReservationPage {
 		}
 
 		throw new RuntimeException("No visible and enabled button found with text: " + buttonText);
+	}
+
+	public void clickReceivePayment() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+
+		// Ensure the page has fully loaded
+		wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState")
+				.equals("complete"));
+
+		try {
+			WebElement receivePaymentButton = wait.until(ExpectedConditions
+					.presenceOfElementLocated(By.xpath("//button[contains(text(),'Receive Payment')]")));
+
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", receivePaymentButton);
+			wait.until(ExpectedConditions.elementToBeClickable(receivePaymentButton));
+			try {
+				receivePaymentButton.click();
+			} catch (ElementClickInterceptedException e) {
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", receivePaymentButton);
+			}
+
+		} catch (TimeoutException e) {
+			System.out.println("Timeout: 'Receive Payment' button not found.");
+		}
+	}
+
+	public void selectPaymentCard() {
+		selectPaymentMode.click();
+		cardOption.click();
+	}
+
+	public void selectPaymentCash() {
+		selectPaymentMode.click();
+		cashOption.click();
+	}
+
+	public void enterCardReferenceNumber(String cardRefNumber) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement cardRefInput = wait
+				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@formcontrolname='CRN']")));
+		cardRefInput.clear();
+		cardRefInput.sendKeys(cardRefNumber);
+	}
+
+	public boolean isoKPaymentReceviedButtonDisplayed() {
+		boolean status = wait.until(ExpectedConditions.visibilityOf(oKPaymentReceviedButton)).isDisplayed();
+		oKPaymentReceviedButton.click();
+		return status;
+	}
+
+	public PaymentPage goToReceivePaymentCard(String cardInformation) {
+
+		clickReceivePayment();
+		String currentWindowHandle = driver.getWindowHandle();
+		selectPaymentCard();
+		enterCardReferenceNumber(cardInformation);
+		payNowBtn.click();
+		return new PaymentPage(driver, currentWindowHandle);
+	}
+	
+	public void clickCollectPaymentButton() {
+		collectPayment.click();
+	}
+	
+public AddReservationPage goToReceivePaymentCash() {
+		
+		clickReceivePayment();
+		selectPaymentCash();
+		clickCollectPaymentButton();
+		return new AddReservationPage(driver);		
 	}
 
 }
