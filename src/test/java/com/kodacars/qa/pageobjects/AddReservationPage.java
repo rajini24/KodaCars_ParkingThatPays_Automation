@@ -2,6 +2,7 @@ package com.kodacars.qa.pageobjects;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -23,7 +24,10 @@ import com.kodacars.qa.uilities.CommonUtils;
 public class AddReservationPage {
 	Faker faker = new Faker();
 	WebDriverWait wait;
+	WebDriverWait longwait;
 	WebDriver driver;
+	 private double totalAmount;
+	 private double prepaidAmount;
 	CommonUtils utilsObj = CommonUtils.getInstance(driver);
 
 	public AddReservationPage(WebDriver driver) {
@@ -32,6 +36,7 @@ public class AddReservationPage {
 		}
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		this.longwait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
 	}
 
@@ -59,7 +64,7 @@ public class AddReservationPage {
 	@CacheLookup
 	private WebElement selectLocationdropdown;
 
-	@FindBy(xpath = "//ng-select[@formcontrolname='location' and @bindlabel='name']//span[contains(text(),'Barcelona')]")
+	@FindBy(xpath = "//ng-select[@formcontrolname='location' and @bindlabel='name']//span[contains(text(),'Madrid')]")
 	@CacheLookup
 	private WebElement selectLocation;
 
@@ -154,9 +159,12 @@ public class AddReservationPage {
 	@CacheLookup
 	private WebElement selectThirdPartySource;
 
-	@FindBy(xpath = "//input[@formcontrolname='prepaidAmount']")
-	@CacheLookup
-	private WebElement prepaidAmount;
+//	@FindBy(xpath = "//input[@formcontrolname='prepaidAmount']")
+//	@CacheLookup
+//	private WebElement prepaidAmount;
+//	@FindBy(xpath = "//input[@formcontrolname='prepaidAmount']")
+//	@CacheLookup
+//	private WebElement prepaidAmount;
 
 	@FindBy(xpath = "//div[@class='modal-footer']//button[text()='Search']")
 	@CacheLookup
@@ -194,7 +202,7 @@ public class AddReservationPage {
 	@FindBy(xpath = "//span[contains(@class, 'p-dropdown-label') and text()='Select Payment Mode']")
 	@CacheLookup
 	private WebElement selectPaymentMode;
-	
+
 	@FindBy(xpath = "//button[@id='closeModal' and text()='Collect Payment']")
 	@CacheLookup
 	private WebElement collectPayment;
@@ -285,7 +293,7 @@ public class AddReservationPage {
 	}
 
 	public void enterstartDate() {
-		enterstartDate.sendKeys("04/08/2025");
+		enterstartDate.sendKeys("04/09/2025");
 	}
 
 	public void enterstartTime() {
@@ -293,7 +301,7 @@ public class AddReservationPage {
 	}
 
 	public void enterEndDate() {
-		enterEndDate.sendKeys("04/09/2025");
+		enterEndDate.sendKeys("04/10/2025");
 	}
 
 	public void enterEndTime() {
@@ -308,19 +316,205 @@ public class AddReservationPage {
 		prepaidPartial.sendKeys(prepaid, Keys.ENTER);
 	}
 
-	public void enterTotalAmount() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		WebElement totalAmountInput = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='totalAmount']")));
-		totalAmountInput.sendKeys("16.25");
-	}
+//	public void enterTotalAmount() {
+//		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//		WebElement totalAmountInput = wait.until(
+//				ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='totalAmount']")));
+//		totalAmountInput.sendKeys("30");
+//	}
+//
+//	public void enterPrepaidAmount() {
+//		// WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		 wait.until(ExpectedConditions.visibilityOf(prepaidAmount));
+//		
+//	}
+//	public void enterPrepaidAmount() {
+//		// WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		WebElement totalAmountField = wait.until(ExpectedConditions.visibilityOf(prepaidAmount));
+//		totalAmountField.sendKeys("10");
+//	}
+	
+	
+	 // Elements - located by Page Factory annotations
+    @FindBy(xpath = "//input[@formcontrolname='totalAmount']")
+    private WebElement totalAmountInput;
 
-	public void enterPrepaidAmount() {
-		// WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement totalAmountField = wait.until(ExpectedConditions.visibilityOf(prepaidAmount));
-		totalAmountField.sendKeys("8");
-	}
+    @FindBy(xpath = "//input[@formcontrolname='prepaidAmount']")
+    private WebElement prepaidAmountInput;
 
+    @FindBy(xpath = "//input[@formcontrolname='dueAmount']")
+    private WebElement dueAmountInput;
+    
+    public void enterTotalAmount(double amount) {
+        this.totalAmount = amount;
+        wait.until(ExpectedConditions.visibilityOf(totalAmountInput)).clear();
+        totalAmountInput.sendKeys(String.valueOf(amount));
+    }
+
+    public void enterPrepaidAmount(double amount) {
+        this.prepaidAmount = amount;
+        wait.until(ExpectedConditions.visibilityOf(prepaidAmountInput)).clear();
+        prepaidAmountInput.sendKeys(String.valueOf(amount));
+    }
+   
+//    public void validateDueAmount() {
+//        // Wait until the document is completely loaded
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        boolean isPageLoaded = js.executeScript("return document.readyState").equals("complete");
+//
+//        // Log the status of the page load for debugging
+//        System.out.println("Page load complete: " + isPageLoaded);
+//
+//        // If the page isn't fully loaded, handle accordingly
+//        if (!isPageLoaded) {
+//            throw new AssertionError("❌ Page not fully loaded, cannot validate due amount.");
+//        }
+//
+//        // Check if the modal is present and close it if necessary
+//        try {
+//            // Wait for the modal backdrop to be visible, if it's there
+//            WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".modal-backdrop.fade.show")));
+//            
+//            if (modal.isDisplayed()) {
+//                // Handle closing the modal or wait for it to disappear
+//                WebElement closeButton = driver.findElement(By.cssSelector(".modal .close"));
+//                closeButton.click(); // Close the modal
+//                // Optionally wait for modal to disappear
+//                wait.until(ExpectedConditions.invisibilityOf(modal));
+//            }
+//        } catch (NoSuchElementException | TimeoutException e) {
+//            // Modal not found or not visible, continue with the test
+//            System.out.println("Modal not found or not visible, continuing with the test.");
+//        }
+//
+//        // Wait for the due amount input field to be present and clickable
+//        final WebElement dueField = wait.until(ExpectedConditions.presenceOfElementLocated(
+//            By.cssSelector("input[formcontrolname='dueAmount']")));
+//        
+//        // Now that it's present in the DOM, wait until it is clickable
+//        wait.until(ExpectedConditions.elementToBeClickable(dueField));
+//
+//        // Log the value before checking it
+//        String value = dueField.getDomAttribute("value");
+//        System.out.println("Due amount field value: " + value);
+//
+//        // Wait until the due amount field has a non-empty value
+//        wait.until(driver -> {
+//            String updatedValue = dueField.getDomAttribute("value");
+//            System.out.println("Current due amount value: " + updatedValue); // Log the value
+//            return updatedValue != null && !updatedValue.trim().isEmpty();
+//        });
+//
+//        // Fetch the actual due amount value
+//        String actualDueStr = dueField.getDomAttribute("value");
+//        if (actualDueStr == null || actualDueStr.trim().isEmpty()) {
+//            throw new AssertionError("❌ Due amount is empty");
+//        }
+//
+//        double actualDue = Double.parseDouble(actualDueStr);
+//
+//        // Ensure totalAmount and prepaidAmount are set correctly
+//        System.out.println("Total Amount: " + totalAmount);
+//        System.out.println("Prepaid Amount: " + prepaidAmount);
+//
+//        double expectedDue = totalAmount - prepaidAmount;
+//
+//        // Compare expected and actual due amounts
+//        if (Math.round(actualDue * 100) != Math.round(expectedDue * 100)) {
+//            throw new AssertionError("❌ Due amount mismatch. Expected: " + expectedDue + ", but was: " + actualDue);
+//        }
+//
+//        System.out.println("✅ Due amount is correct: " + actualDue);
+//
+//        // Wait for the input field to be clickable again (if needed)
+//        WebElement inputElement = wait.until(ExpectedConditions.elementToBeClickable(dueField));
+//
+//        // Click the input field
+//        inputElement.click();
+//    }
+//
+
+    
+    public void validateDueAmount() {
+        // Wait until the document is completely loaded
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        boolean isPageLoaded = js.executeScript("return document.readyState").equals("complete");
+
+        // Log the status of the page load for debugging
+        System.out.println("Page load complete: " + isPageLoaded);
+
+        // If the page isn't fully loaded, handle accordingly
+        if (!isPageLoaded) {
+            throw new AssertionError("❌ Page not fully loaded, cannot validate due amount.");
+        }
+
+        // Check if the modal is present and close it if necessary
+        try {
+            // Wait for the modal backdrop to be visible, if it's there
+            WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".modal-backdrop.fade.show")));
+            
+            if (modal.isDisplayed()) {
+                // Handle closing the modal or wait for it to disappear
+                WebElement closeButton = driver.findElement(By.cssSelector(".modal .close"));
+                closeButton.click(); // Close the modal
+                // Optionally wait for modal to disappear
+                wait.until(ExpectedConditions.invisibilityOf(modal));
+            }
+        } catch (NoSuchElementException | TimeoutException e) {
+            // Modal not found or not visible, continue with the test
+            System.out.println("Modal not found or not visible, continuing with the test.");
+        }
+
+        // Wait until the due amount input field is present
+        WebElement dueField = longwait.until(ExpectedConditions.presenceOfElementLocated(
+            By.cssSelector("input[formcontrolname='dueAmount']")));
+    wait.until(ExpectedConditions.not(
+            ExpectedConditions.textToBePresentInElementValue(dueField, "")));
+
+
+        // Wait until the value is not empty (dynamic wait)
+        wait.until(ExpectedConditions.attributeToBeNotEmpty(dueField, "value"));
+
+        String dueAmountValue = dueField.getDomAttribute("value");
+        System.out.println("Due amount value: " + dueAmountValue);
+
+        // Ensure that the value is not null or empty
+        if (dueAmountValue == null || dueAmountValue.trim().isEmpty()) {
+            throw new AssertionError("❌ Due amount field value is empty or null.");
+        }
+
+        // Convert the value to a double safely
+        double actualDue = 0.0;
+        try {
+            actualDue = Double.parseDouble(dueAmountValue);
+        } catch (NumberFormatException e) {
+            throw new AssertionError("❌ Due amount value is not a valid number.");
+        }
+
+        // Continue with the rest of your validation logic
+        System.out.println("Total Amount: " + totalAmount);
+        System.out.println("Prepaid Amount: " + prepaidAmount);
+
+        double expectedDue = totalAmount - prepaidAmount;
+
+        // Compare expected and actual due amounts
+        if (Math.round(actualDue * 100) != Math.round(expectedDue * 100)) {
+            throw new AssertionError("❌ Due amount mismatch. Expected: " + expectedDue + ", but was: " + actualDue);
+        }
+
+        System.out.println("✅ Due amount is correct: " + actualDue);
+
+        // Wait for the input field to be clickable again (if needed)
+        WebElement inputElement = wait.until(ExpectedConditions.elementToBeClickable(dueField));
+
+        // Scroll the element into view to ensure it's interactable
+        js.executeScript("arguments[0].scrollIntoView(true);", inputElement);
+
+        // Use JavaScript to click the input field if it's blocked
+        js.executeScript("arguments[0].click();", inputElement);
+    }
+   
+//******************************************888
 	public void clicksearchBtn() {
 		// WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(searchBtn));
@@ -548,8 +742,9 @@ public class AddReservationPage {
 		enterEndDate();
 		enterEndTime();
 		selectReservationPrepaid(PrepaidPartial);
-		enterTotalAmount();
-		enterPrepaidAmount();
+		enterTotalAmount(30); //prepaid total
+		enterPrepaidAmount(15);
+		validateDueAmount();
 
 		// Add Vehicle Details
 		clickAddVehicle();
@@ -566,6 +761,36 @@ public class AddReservationPage {
 		return isOkBtnDispalyed;
 
 	}
+	
+	public void validateDueAmount(double expectedTotal, double expectedPrepaid) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    
+	    // Wait for dueAmount field to be visible
+	    WebElement dueAmountField = wait.until(
+	        ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@formcontrolname='dueAmount']"))
+	    );
+
+	    // Check if it's readonly
+	    String isReadonly = dueAmountField.getAttribute("readonly");
+	    if (isReadonly == null) {
+	        throw new AssertionError("Due amount field is not readonly!");
+	    }
+
+	    // Get the actual value in the field
+	    String actualValueStr = dueAmountField.getAttribute("value");
+	    double actualValue = Double.parseDouble(actualValueStr);
+
+	    // Calculate expected due amount
+	    double expectedDue = expectedTotal - expectedPrepaid;
+
+	    // Compare expected and actual values (allowing for minor float differences)
+	    if (Math.abs(actualValue - expectedDue) > 0.01) {
+	        throw new AssertionError("Expected due amount: " + expectedDue + ", but found: " + actualValue);
+	    }
+
+	    System.out.println("✅ Due amount validated successfully: " + actualValue);
+	}
+
 
 	public void clickOkButton() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -583,7 +808,11 @@ public class AddReservationPage {
 	}
 
 	public void okBtnUpdateReservation() {
-		// WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement okButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Ok']")));
+		okButton.click();
+	}
+
+	public void okBtnCheckIn() {
 		WebElement okButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Ok']")));
 		okButton.click();
 	}
@@ -597,7 +826,22 @@ public class AddReservationPage {
 	// **************CheckIn / Key In
 	public void checkInKeyIn(String checkInButton) {
 		clickActionButtonBtnDisplayed(checkInButton);
+		clickcheckInKeyInBtn();
+		okBtnCheckIn();
+		clickUpdateLocation();
 
+	}
+
+	public void clickcheckInKeyInBtn() {
+		WebElement okButton = wait.until(
+				ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), 'Check-In/ Key-In')]")));
+		okButton.click();
+	}
+
+	public void clickUpdateLocation() {
+		WebElement updateButton = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//div[@id='gridContainer']//button[text()='Update Location']")));
+		updateButton.click();
 	}
 
 	public void clickButtonByText(String buttonText) {
@@ -687,17 +931,17 @@ public class AddReservationPage {
 		payNowBtn.click();
 		return new PaymentPage(driver, currentWindowHandle);
 	}
-	
+
 	public void clickCollectPaymentButton() {
 		collectPayment.click();
 	}
-	
-public AddReservationPage goToReceivePaymentCash() {
-		
+
+	public AddReservationPage goToReceivePaymentCash() {
+
 		clickReceivePayment();
 		selectPaymentCash();
 		clickCollectPaymentButton();
-		return new AddReservationPage(driver);		
+		return new AddReservationPage(driver);
 	}
 
 }

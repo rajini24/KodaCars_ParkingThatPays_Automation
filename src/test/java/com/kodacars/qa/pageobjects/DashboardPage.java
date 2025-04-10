@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -21,6 +22,7 @@ public class DashboardPage {
 
 	WebDriver driver;
 	WebDriverWait wait;
+	WebDriverWait longwait;
 	CommonUtils utilsObj = CommonUtils.getInstance(driver);
 	
 	public DashboardPage(WebDriver driver) {
@@ -29,6 +31,7 @@ public class DashboardPage {
 			throw new IllegalArgumentException("Driver instance cannot be null");
 		}
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		this.longwait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -61,6 +64,39 @@ public class DashboardPage {
 		clickYesConfirmation.click();
 		return new AddReservationPage(driver);
 	}
+	
+	//public void clickSubmitButton() {
+//	public AddReservationPage clickYesConfirmation() {
+//
+//	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//
+//	    try {
+//	        // Wait for any overlay to disappear before interacting with the button
+//	        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".overlay.ng-star-inserted")));
+//
+//	        // Find the submit button
+//	        WebElement button = driver.findElement(By.xpath("//button[text()='Yes']"));
+//	        
+//	        // Scroll the button into view if needed
+//	        JavascriptExecutor js = (JavascriptExecutor) driver;
+//	        js.executeScript("arguments[0].scrollIntoView(true);", button);
+//
+//	        // Now click the button
+//	        button.click();
+//	        
+//	    } catch (TimeoutException e) {
+//	        System.out.println("Timeout waiting for overlay to disappear.");
+//	    } catch (ElementClickInterceptedException e) {
+//	        System.out.println("Element click intercepted, trying JS click.");
+//	        // Fallback to JS click
+//	        WebElement button = driver.findElement(By.xpath("//button[text()='Yes']"));
+//	        JavascriptExecutor js = (JavascriptExecutor) driver;
+//	        js.executeScript("arguments[0].click();", button);
+//	    }
+//	    return new AddReservationPage(driver);
+//	}
+
+
 
 	public void clickAddReservation() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
